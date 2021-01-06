@@ -1,0 +1,66 @@
+@extends('layout.base')
+
+@section('navbar-fixed', True)
+
+@section('header')
+    <header class="background-wrapper background-filter-light" style="min-height: 125vh;">
+        <div class="background-image" style="background-image: url({{ asset('images/archive/large/header.jpg') }});"></div>
+        <div class="background-text container d-flex flex-column align-items-center" style="height: 100vh;">
+            <div class="my-auto text-center">
+                <h1>Willkommen...</h1>
+                <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen e.V.!</h2>
+            </div>
+            <div class="scroll pb-5">
+                <a class="text-white" href="#news">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Mehr Infos & News
+                </a>
+            </div>
+        </div>
+    </header>
+@endsection
+
+@section('main')
+    <div class="container py-4" id="news">
+        <div class="row row-cols-1 row-cols-md-3 g-4" data-masonry='{"percentPosition": true }' id="lightgallery">
+            <div class="col">
+                <div class="card shadow-sm bg-primary text-white">
+                    <div class="card-body">
+                        <p class="card-text mb-3">
+                            Wir sind ein junger Musikverein aus Nentershausen im Westerwald und bieten Ihnen Musik für die verschiedensten Anlässe. Gerne kommen wir auch zu Ihrer Veranstaltung,  <a href="{{ url('kontakt') }}">schreiben Sie uns eine Mail oder rufen Sie einfach an</a>!
+                        </p>
+                        <p class="card-text">
+                            Nachfolgend finden Sie ein paar Neuigkeiten aus dem Vereinsleben. Noch mehr Neuigkeiten gibt es auf <a target="_blank" href="https://www.instagram.com/musikalische.loewen/" >Instagram</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            @foreach(\App\Models\Post::take(5)->get() as $post)
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <a href="{{ asset('storage/'.$post->path_display) }}" class="card-img-wrap">
+                            <img src="{{ asset('storage/'.$post->path_thumbnail) }}" class="card-img-top" alt="{{ $post->accessibilityCaption }}">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-text">{{ $post->caption }}</p>
+                            <p class="card-text"><small class="text-muted">Veröffentlicht {{ $post->date->diffForHumans()  }}</small></p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+@endsection
+
+@section('javascript')
+    <script type="text/javascript">
+        // Initialize lightgallery
+        let lightGalleryOptions = {
+            selector: '.card-img-wrap',
+            download: false,
+        };
+        lightGallery(document.getElementById('lightgallery'), lightGalleryOptions);
+    </script>
+@endsection

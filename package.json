@@ -1,0 +1,33 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "sharp": "npm run sharp-large && npm run sharp-medium && npm run sharp-small && npm run sharp-logos",
+        "sharp-large": "sharp -i resources/images/archive/*.jpg -o public/images/archive/large -q 90 -- resize 1920",
+        "sharp-medium": "sharp -i resources/images/archive/*.jpg -o public/images/archive/medium -q 90 -- resize 1080",
+        "sharp-small": "sharp -i resources/images/archive/*.jpg -o public/images/archive/small -q 90 -- resize 640",
+        "sharp-logos": "sharp -i resources/images/logos/*.png -o public/images/logos -q 90 -- resize 64"
+    },
+    "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.1",
+        "@popperjs/core": "^2.6.0",
+        "axios": "^0.21.1",
+        "bootstrap": "^5.0.0-beta1",
+        "cross-env": "^7.0",
+        "laravel-mix": "^5.0.1",
+        "lightgallery.js": "^1.4.0",
+        "lodash": "^4.17.19",
+        "masonry-layout": "^4.2.2",
+        "resolve-url-loader": "^3.1.0",
+        "sass": "^1.32.0",
+        "sass-loader": "^8.0.2",
+        "sharp-cli": "^1.14.1",
+        "vue-template-compiler": "^2.6.12"
+    }
+}
