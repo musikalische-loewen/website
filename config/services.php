@@ -30,12 +30,6 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
-    'google' => [
-        'maps' => [
-            'key' => env('GOOGLE_MAPS_KEY')
-        ]
-    ],
-
     'instagram' => [
         'profile' => env('INSTAGRAM_PROFILE', 'musikalische.loewen'),
         'username' => env('INSTAGRAM_USERNAME'),
