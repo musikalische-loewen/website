@@ -24,7 +24,7 @@
 
 @section('main')
     <div class="container py-4" id="news">
-        <div class="row row-cols-1 row-cols-md-3 g-4" data-masonry='{"percentPosition": true }' id="lightgallery">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="lightgallery">
             <div class="col">
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
@@ -62,5 +62,13 @@
             download: false,
         };
         lightGallery(document.getElementById('lightgallery'), lightGalleryOptions);
+        // Initialize Mansonry
+        let mansonry = document.getElementById('lightgallery').masonry({
+            percentPosition: true,
+        });
+        // Layout Masonry after each image loaded
+        mansonry.imagesLoaded().progress( function() {
+            mansonry.masonry('layout');
+        });
     </script>
 @endsection

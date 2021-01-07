@@ -19,6 +19,7 @@
         "@popperjs/core": "^2.6.0",
         "axios": "^0.21",
         "bootstrap": "^5.0.0-beta1",
+        "imagesloaded": "^4.1.4",
         "laravel-mix": "^6.0.6",
         "laravel-mix-purgecss": "^6.0.0",
         "lightgallery.js": "^1.4.0",

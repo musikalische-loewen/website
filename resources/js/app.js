@@ -4,6 +4,9 @@ require('./bootstrap');
 // Import the real Bootstrap framework
 import 'bootstrap';
 
+// Import imagesLoaded
+import 'imagesloaded';
+
 // Import Lightgallery scripts
 import 'lightgallery.js';
 
