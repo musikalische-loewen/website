@@ -63,7 +63,8 @@
             "@php -r \"new SQLite3('database/database.sqlite');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
+            "@php artisan key:generate --ansi",
+            "@php artisan storage:link"
         ]
     }
 }
