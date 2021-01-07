@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+Artisan::command('posts:sync', function () {
+    \App\Jobs\PostSync::dispatch();
+    $this->info('Job for syncing posts dispatched!');
+})->purpose('Sync posts from Instagram');
