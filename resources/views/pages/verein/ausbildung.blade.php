@@ -12,7 +12,7 @@
     <div class="container mt-5 mb-4">
         <h2>Musikalische Früherziehung</h2>
         <div class="row">
-            <div class="col col-md-4 mb-4">
+            <div class="col-12 col-md-4 mb-4">
                 <div class="card shadow-sm h-100">
                     <div class="card-header">
                         <b>Anfängerkurs</b>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4 mb-4">
+            <div class="col-12 col-md-4 mb-4">
                 <div class="card mb-4 shadow-sm h-100">
                     <div class="card-header">
                         <b>Fortgeschrittenenkurs</b>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col col-md-4 mb-4">
+            <div class="col-12 col-md-4 mb-4">
                 <div class="card shadow-sm mb-4 h-100">
                     <div class="card-img-wrap card-image-cover">
                         <img src="{{ asset('images/archive/medium/pexels-cottonbro-4709815.jpg') }}" class="card-img" alt="Girl playing the saxophone">
