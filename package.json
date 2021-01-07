@@ -12,7 +12,7 @@
         "sharp-large": "sharp -i resources/images/archive/*.jpg -o public/images/archive/large -q 90 -- resize 1920",
         "sharp-medium": "sharp -i resources/images/archive/*.jpg -o public/images/archive/medium -q 90 -- resize 1080",
         "sharp-small": "sharp -i resources/images/archive/*.jpg -o public/images/archive/small -q 90 -- resize 640",
-        "sharp-logos": "sharp -i resources/images/logos/*.png -o public/images/logos -q 90 -- resize 64"
+        "sharp-logos": "sharp -i resources/images/logos/*.png -o public/images/logos -q 90 -- resize 195"
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.15.1",

@@ -1,9 +1,9 @@
 <div class="container">
     <a class="navbar-brand" href="{{ url('/') }}">
-        <img src="{{ asset('images/logos/logo_white.png') }}" class="mr-3" alt="Logo" />
+        <img src="{{ asset('images/logos/logo_white.png') }}" height="32" width="66" class="mr-3" alt="Logo" />
         {{ config('app.name') }}
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navigation">
@@ -67,14 +67,14 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://web.konzertmeister.app" class="nav-link" target="_blank">
+                <a href="https://web.konzertmeister.app" class="nav-link" target="_blank" rel="noreferrer">
                     {{-- TODO: Replace icon --}}
                     <i class="fa fa-calendar-check"></i>
                     <span class="d-lg-none d-xl-none">Konzertmeister</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="https://www.instagram.com/musikalische.loewen/" class="nav-link" target="_blank">
+                <a href="https://www.instagram.com/musikalische.loewen/" class="nav-link" target="_blank" rel="noreferrer">
                     <i class="fab fa-instagram"></i>
                     <span class="d-lg-none d-xl-none">Instagram</span>
                 </a>

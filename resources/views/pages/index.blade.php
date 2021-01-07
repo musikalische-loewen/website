@@ -32,7 +32,7 @@
                             Wir sind ein junger Musikverein aus Nentershausen im Westerwald und bieten Ihnen Musik für die verschiedensten Anlässe. Gerne kommen wir auch zu Ihrer Veranstaltung,  <a href="{{ url('kontakt') }}">schreiben Sie uns eine Mail oder rufen Sie einfach an</a>!
                         </p>
                         <p class="card-text">
-                            Nachfolgend finden Sie ein paar Neuigkeiten aus dem Vereinsleben. Noch mehr Neuigkeiten gibt es auf <a target="_blank" href="https://www.instagram.com/musikalische.loewen/" >Instagram</a>.
+                            Nachfolgend finden Sie ein paar Neuigkeiten aus dem Vereinsleben. Noch mehr Neuigkeiten gibt es auf <a target="_blank" rel="noreferrer" href="https://www.instagram.com/musikalische.loewen/" >Instagram</a>.
                         </p>
                     </div>
                 </div>

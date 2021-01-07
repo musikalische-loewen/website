@@ -15,7 +15,6 @@
 
         <link href="{{ asset('images/logos/logo_black.png') }}" rel="icon" type="image/png">
         <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
-        <link href="/css/custom.css" rel="stylesheet" {{-- TODO: Remove custom CSS --}} />
     </head>
 
     <body class="d-flex flex-column">
