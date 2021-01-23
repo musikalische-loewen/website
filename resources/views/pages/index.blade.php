@@ -63,12 +63,13 @@
         };
         lightGallery(document.getElementById('lightgallery'), lightGalleryOptions);
         // Initialize Mansonry
-        let mansonry = document.getElementById('lightgallery').masonry({
+        let masonry = new Masonry(document.getElementById('lightgallery'), {
+            itemSelector: '.col',
             percentPosition: true,
         });
         // Layout Masonry after each image loaded
-        mansonry.imagesLoaded().progress( function() {
-            mansonry.masonry('layout');
+        imagesLoaded(document.getElementById('lightgallery'), function() {
+            masonry.layout();
         });
     </script>
 @endsection

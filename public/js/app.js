@@ -4889,23 +4889,19 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
-/* harmony import */ var imagesloaded__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! imagesloaded */ "./node_modules/imagesloaded/imagesloaded.js");
-/* harmony import */ var imagesloaded__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(imagesloaded__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lightgallery.js */ "./node_modules/lightgallery.js/lib/js/lightgallery.js");
-/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lightgallery_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var masonry_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! masonry-layout */ "./node_modules/masonry-layout/masonry.js");
-/* harmony import */ var masonry_layout__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(masonry_layout__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery.js */ "./node_modules/lightgallery.js/lib/js/lightgallery.js");
+/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lightgallery_js__WEBPACK_IMPORTED_MODULE_1__);
 // Require bootstrap file
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Import the real Bootstrap framework
 
 
- // Import imagesLoaded
-
  // Import Lightgallery scripts
 
- // Import Masonry
+ // Import imagesLoaded
 
- // Color navbar properly
+window.imagesLoaded = __webpack_require__(/*! imagesloaded */ "./node_modules/imagesloaded/imagesloaded.js"); // Import Masonry
+
+window.Masonry = __webpack_require__(/*! masonry-layout */ "./node_modules/masonry-layout/masonry.js"); // Color navbar properly
 
 var navbar = document.getElementsByClassName('navbar')[0];
 var navbar_transparent = navbar.classList.contains('bg-transparent');
