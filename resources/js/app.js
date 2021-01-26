@@ -4,14 +4,14 @@ require('./bootstrap');
 // Import the real Bootstrap framework
 import 'bootstrap';
 
-// Import imagesLoaded
-import 'imagesloaded';
-
 // Import Lightgallery scripts
 import 'lightgallery.js';
 
+// Import imagesLoaded
+window.imagesLoaded = require('imagesloaded');
+
 // Import Masonry
-import 'masonry-layout';
+window.Masonry = require('masonry-layout');
 
 // Color navbar properly
 let navbar = document.getElementsByClassName('navbar')[0];
