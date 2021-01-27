@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormsController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Form routes
+Route::post('kontakt', [FormsController::class, 'contact'])->name('forms.contact');
+Route::post('verein/mitgliedschaft', [FormsController::class, 'membership'])->name('forms.membership');
+
 // Default page routes
-// TODO: Make this a package
 Route::get('{path?}', PagesController::class)->where('path', '.*');

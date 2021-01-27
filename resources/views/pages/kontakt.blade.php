@@ -45,22 +45,45 @@
                         <p class="mb-0">Sie erreichen uns unter <a class="text-white" href="mailto:{{ config('mail.to.address') }}">{{ config('mail.to.address') }}</a>, unter <a class="text-white" href="tel:+4964854300">06485 4300</a> oder über das nachfolgende Kontaktformular.</p>
                     </div>
                 </div>
+                @if(session('success'))
+                <div class="card shadow-sm bg-success text-white mt-0 mb-4 py-0">
+                    <div class="card-body">
+                        <p class="mb-0">{{ session('success') }}</p>
+                    </div>
+                </div>
+                @endif
                 <div class="card shadow-sm my-0 py-0">
-                    <form method="get" action="#" {{-- TODO: Make a real form with submit button etc. --}} >
+                    <form method="post" action="{{ route('forms.contact') }}" >
+                        @csrf
                         <div class="card-body">
-                            <div class="form-floating mb-3">
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Max Mustermann">
+                            <div class="form-floating mb-3 has-validation">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Max Mustermann" value="{{ old('name') }}" required>
                                 <label for="name">Name</label>
+                                @error('name')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="max.mustermann@example.com">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="max.mustermann@example.com" value="{{ old('email') }}" required>
                                 <label for="email">E-Mail</label>
+                                @error('email')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Hallo! Ich suche ein Orchester zur musikalischen Begleitung unserer Jubiläumsfeier... " id="message" style="height: 150px"></textarea>
+                                <textarea class="form-control @error('message') is-invalid @enderror" placeholder="Hallo! Ich suche ein Orchester zur musikalischen Begleitung unserer Jubiläumsfeier... " name="message" style="height: 150px" required>{{ old('message') }}</textarea>
                                 <label for="message">Nachricht</label>
+                                @error('message')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
-                            <button type="button" class="btn btn-primary btn-round btn-block">Nachricht absenden</button>
+                            <button type="submit" class="btn btn-primary btn-round btn-block">Nachricht absenden</button>
                         </div>
                     </form>
                 </div>
