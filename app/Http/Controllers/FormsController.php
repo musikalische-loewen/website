@@ -7,11 +7,25 @@ use App\Http\Requests\Forms\MembershipRequest;
 use App\Mail\Forms\ContactMail;
 use App\Mail\Forms\MembershipMail;
 use Illuminate\Support\Facades\Mail;
+use Spatie\Honeypot\ProtectAgainstSpam;
 
 class FormsController extends Controller
 {
     /**
-     * Process the contact form request
+     * Instantiate a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware(ProtectAgainstSpam::class);
+    }
+
+    /**
+     * Process the contact form request.
+     *
+     * @param ContactRequest $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function contact(ContactRequest $request)
     {
@@ -20,7 +34,10 @@ class FormsController extends Controller
     }
 
     /**
-     * Process the membership form request
+     * Process the membership form request.
+     *
+     * @param MembershipRequest $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function membership(MembershipRequest $request)
     {

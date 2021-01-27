@@ -55,6 +55,7 @@
                 <div class="card shadow-sm my-0 py-0">
                     <form method="post" action="{{ route('forms.contact') }}" >
                         @csrf
+                        @honeypot
                         <div class="card-body">
                             <div class="form-floating mb-3 has-validation">
                                 <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Max Mustermann" value="{{ old('name') }}" required>

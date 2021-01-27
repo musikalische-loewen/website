@@ -18,6 +18,7 @@
         <div class="card shadow-sm my-0 py-0">
             <form method="post" action="{{ route('forms.membership') }}" >
                 @csrf
+                @honeypot
                 <div class="card-body">
                     <div class="mb-3">
                         Hiermit erkläre ich meinen Eintritt in den {{ config('app.name_full') }} als
