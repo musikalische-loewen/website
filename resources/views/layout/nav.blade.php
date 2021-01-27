@@ -43,9 +43,9 @@
                     <li><a class="dropdown-item" href="{{ url('verein/chronik') }}">
                             Chronik
                         </a></li>
-                    <li><a class="dropdown-item" href="{{ url('verein/presse') }}">
+                    {{--<li><a class="dropdown-item" href="{{ url('verein/presse') }}">
                             Presse
-                        </a></li>
+                        </a></li>--}}
                 </ul>
             </li>
             <li class="nav-item">
