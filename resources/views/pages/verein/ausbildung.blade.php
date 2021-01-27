@@ -29,7 +29,7 @@
                         <li class="list-group-item">Spielen des Erlernten auf einem <b>Glockenspiel</b></li>
                     </ul>
                     <div class="card-body">
-                        <button type="button" class="btn btn-primary">Fragen?</button>
+                        <a href="{{ asset('docs/info_mfe.pdf') }}" class="btn btn-primary">Elterninfo herunterladen</a>
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                         <li class="list-group-item">Spielen des Erlernten auf einem <b>Glockenspiel</b></li>
                     </ul>
                     <div class="card-body">
-                        <button type="button" class="btn btn-primary">Kontakt</button>
+                        <a href="{{ url('kontakt') }}" class="btn btn-primary">Fragen?</a>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                         <li class="list-group-item">Erlernen erster Lieder bis hin zum Üben von Stücken der Orchester</li>
                     </ul>
                     <div class="card-body">
-                        <button type="button" class="btn btn-primary">Anmeldung</button>
+                        <a href="{{ url('kontakt') }}" class="btn btn-primary">Kontakt</a>
                     </div>
                 </div>
             </div>
