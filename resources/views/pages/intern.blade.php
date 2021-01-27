@@ -36,6 +36,11 @@
     <div class="container mt-3 mb-5">
         <div class="row">
             <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm bg-primary text-white mt-0 mb-4 py-0">
+                    <div class="card-body">
+                        <p class="mb-0">Bitte beachten Sie, dass der Login zum Internen Bereich derzeit noch nicht aktiv ist.</p>
+                    </div>
+                </div>
                 <div class="card shadow-sm my-0 py-0">
                     <form method="get" action="#" {{-- TODO: Make a real form with submit button etc. --}} >
                         <div class="card-body">
