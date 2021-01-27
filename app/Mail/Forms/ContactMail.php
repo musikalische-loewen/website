@@ -16,7 +16,7 @@ class ContactMail extends Mailable implements ShouldQueue
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param array $data
      */
     public function __construct(array $data)
     {
@@ -31,7 +31,7 @@ class ContactMail extends Mailable implements ShouldQueue
     public function build()
     {
         return $this->to(config('mail.to.address'))
-            ->subject('Anfrage via Kontakt-Formular')
+            ->subject('Anfrage via Kontaktformular')
             ->markdown('emails.forms.contact');
     }
 }

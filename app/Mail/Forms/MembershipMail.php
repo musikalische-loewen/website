@@ -11,14 +11,16 @@ class MembershipMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
+    public $data;
+
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @param array $data
      */
-    public function __construct()
+    public function __construct(array $data)
     {
-        //
+        $this->data = $data;
     }
 
     /**
@@ -28,6 +30,8 @@ class MembershipMail extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->to(config('mail.to.address'))
+            ->subject('Anfrage via Mitgliedschaftsformular')
+            ->markdown('emails.forms.membership');
     }
 }

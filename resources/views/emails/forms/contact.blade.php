@@ -1,7 +1,7 @@
 @component('mail::message')
 Hallo!
 
-Über das Kontakt-Formular der Website [{{ config('app.url') }}]({{ config('app.url') }}) wurde eine neue Anfrage übermittelt.
+Eine neue Anfrage wurde über das Kontaktformular auf der Website [{{ config('app.url') }}]({{ config('app.url') }}) initiiert.
 
 @component('mail::panel')
 **Name:** {{ $data['name'] }}

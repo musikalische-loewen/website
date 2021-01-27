@@ -57,31 +57,19 @@
                         @csrf
                         <div class="card-body">
                             <div class="form-floating mb-3 has-validation">
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Max Mustermann" value="{{ old('name') }}" required>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" id="name" placeholder="Max Mustermann" value="{{ old('name') }}" required>
                                 <label for="name">Name</label>
-                                @error('name')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
+                                @include('layout.error', ['name' => 'name'])
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="max.mustermann@example.com" value="{{ old('email') }}" required>
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="max.mustermann@example.com" value="{{ old('email') }}" required>
                                 <label for="email">E-Mail</label>
-                                @error('email')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
+                                @include('layout.error', ['name' => 'email'])
                             </div>
                             <div class="form-floating mb-3">
-                                <textarea class="form-control @error('message') is-invalid @enderror" placeholder="Hallo! Ich suche ein Orchester zur musikalischen Begleitung unserer Jubiläumsfeier... " name="message" style="height: 150px" required>{{ old('message') }}</textarea>
+                                <textarea class="form-control @error('message') is-invalid @enderror" placeholder="Hallo! Ich suche ein Orchester zur musikalischen Begleitung unserer Jubiläumsfeier... " name="message" id="message" style="height: 150px" required>{{ old('message') }}</textarea>
                                 <label for="message">Nachricht</label>
-                                @error('message')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror
+                                @include('layout.error', ['name' => 'message'])
                             </div>
                             <button type="submit" class="btn btn-primary btn-round btn-block">Nachricht absenden</button>
                         </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Forms\ContactRequest;
 use App\Http\Requests\Forms\MembershipRequest;
 use App\Mail\Forms\ContactMail;
+use App\Mail\Forms\MembershipMail;
 use Illuminate\Support\Facades\Mail;
 
 class FormsController extends Controller
@@ -23,6 +24,7 @@ class FormsController extends Controller
      */
     public function membership(MembershipRequest $request)
     {
-
+        Mail::send(new MembershipMail($request->all()));
+        return redirect()->back()->with('success', 'Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns bald!');
     }
 }
