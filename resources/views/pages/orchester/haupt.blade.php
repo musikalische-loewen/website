@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Blasorchester')
-@section('image', asset('images/archive/large/orchester-1.jpg'))
+@section('image', asset('images/archive/large/2019_konzert_circus_c.jpg'))
 @section('abstract')
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -22,8 +22,8 @@
             </div>
             <div class="col-md-8 mb-4">
                 <div class="card shadow-sm">
-                    <a href="{{ asset('images/archive/large/orchester-2.jpg') }}" class="card-img-wrap">
-                        <img src="{{ asset('images/archive/medium/orchester-2.jpg') }}" class="card-img-top" alt="Orchester">
+                    <a href="{{ asset('images/archive/large/2018_der_musikalische_loewe_c.jpg') }}" class="card-img-wrap" data-sub-html="Pfingstkonzert 2018: Der Musikalische Löwe">
+                        <img src="{{ asset('images/archive/medium/2018_der_musikalische_loewe_c.jpg') }}" class="card-img-top" alt="Orchester">
                     </a>
                 </div>
             </div>
@@ -31,35 +31,35 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
-                    <a href="{{ asset('images/archive/large/orchester-1.jpg') }}" class="card-img-wrap">
-                        <img src="{{ asset('images/archive/medium/orchester-1.jpg') }}" class="card-img-top" alt="Orchester">
+                    <a href="{{ asset('images/archive/large/2019_konzert_circus_c.jpg') }}" class="card-img-wrap" data-sub-html="Pfingstkonzert 2019: Circus in Nentershausen">
+                        <img src="{{ asset('images/archive/medium/2019_konzert_circus_c.jpg') }}" class="card-img-top" alt="Orchester">
                     </a>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
-                    <a href="{{ asset('images/archive/large/konzert2012.jpg') }}" class="card-img-wrap">
-                        <img src="{{ asset('images/archive/medium/konzert2012.jpg') }}" class="card-img-top" alt="Orchester">
+                    <a href="{{ asset('images/archive/large/2012_konzert_e.jpg') }}" class="card-img-wrap" data-sub-html="Pfingstkonzert 2012: Concierto de Calella">
+                        <img src="{{ asset('images/archive/medium/2012_konzert_e.jpg') }}" class="card-img-top" alt="Orchester">
                     </a>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
-                    <a href="{{ asset('images/archive/large/orchester-3.jpg') }}" class="card-img-wrap">
-                        <img src="{{ asset('images/archive/medium/orchester-3.jpg') }}" class="card-img-top" alt="Orchester">
+                    <a href="{{ asset('images/archive/large/2019_weihnachtsmarkt.jpg') }}" class="card-img-wrap" data-sub-html="Weihnachtsmarkt 2019 in Limburg an der Lahn">
+                        <img src="{{ asset('images/archive/medium/2019_weihnachtsmarkt.jpg') }}" class="card-img-top" alt="Orchester">
                     </a>
                 </div>
             </div>
             <div class="col-md-8 mb-4">
                 <div class="card shadow-sm">
-                    <a href="{{ asset('images/archive/large/orchester-4.jpg') }}" class="card-img-wrap">
-                        <img src="{{ asset('images/archive/medium/orchester-4.jpg') }}" class="card-img-top" alt="Orchester">
+                    <a href="{{ asset('images/archive/large/2020_karneval_c.jpg') }}" class="card-img-wrap" data-sub-html="Veilchendienstagszug 2020 in Heimbach-Weis">
+                        <img src="{{ asset('images/archive/medium/2020_karneval_c.jpg') }}" class="card-img-top" alt="Orchester">
                     </a>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
-                    <a href="{{ asset('images/archive/large/header.jpg') }}" class="card-img-wrap">
+                    <a href="{{ asset('images/archive/large/header.jpg') }}" class="card-img-wrap" data-sub-html="Pfingstkonzert 2014: Very british!">
                         <img src="{{ asset('images/archive/medium/header.jpg') }}" class="card-img-top" alt="Orchester">
                     </a>
                 </div>
