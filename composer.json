@@ -16,6 +16,7 @@
         "intervention/validation": "^2.6",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
+        "lukasmu/laravel-rickroll": "^1.0.2",
         "pgrimaud/instagram-user-feed": "^6.6",
         "spatie/laravel-honeypot": "^3.0"
     },

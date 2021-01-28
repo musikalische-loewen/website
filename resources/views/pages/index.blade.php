@@ -52,6 +52,24 @@
             @endforeach
         </div>
     </div>
+    <!--
+
+      __  __           _ _         _ _          _            _                                      _____                _       _
+     |  \/  |         (_) |       | (_)        | |          | |                                    / ____|              (_)     | |
+     | \  / |_   _ ___ _| | ____ _| |_ ___  ___| |__   ___  | |     ___   _____      _____ _ __   | (___  _ __   ___ _____  __ _| |
+     | |\/| | | | / __| | |/ / _` | | / __|/ __| '_ \ / _ \ | |    / _ \ / _ \ \ /\ / / _ \ '_ \   \___ \| '_ \ / _ \_  / |/ _` | |
+     | |  | | |_| \__ \ |   < (_| | | \__ \ (__| | | |  __/ | |___| (_) |  __/\ V  V /  __/ | | |  ____) | |_) |  __// /| | (_| | |
+     |_|  |_|\__,_|___/_|_|\_\__,_|_|_|___/\___|_| |_|\___| |______\___/ \___| \_/\_/ \___|_| |_| |_____/| .__/ \___/___|_|\__,_|_|
+                                                                                                         | |
+                                                                                                         |_|
+    Herzlich Glückwunsch! Sie haben das Musikalische Löwen Spezial gefunden!
+    Als Gewinn gibt es drei geheime YouTube Links:
+    - Musiplantschen auf dem Herthasee: https://www.youtube.com/watch?v=rNR3o-FCjPw
+    - Quellkartoffel und Dupp Dupp für vier Clowns: https://www.youtube.com/watch?v=f9ghAKP6IIE
+    - Weihnachtsfeier: https://www.youtube.com/watch?v=GSnxeejk9mk
+    Viel Spaß damit!
+
+    -->
 @endsection
 
 @section('javascript')

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6eae34c7f768697186ff8a9f7897d211",
+    "content-hash": "df479d8e5729d49db90900fd6eb91b8a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1444,6 +1444,69 @@
                 }
             ],
             "time": "2021-01-18T20:58:21+00:00"
+        },
+        {
+            "name": "lukasmu/laravel-rickroll",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lukasmu/laravel-rickroll.git",
+                "reference": "19f1108519209dc862ea205f84c93d5dc25817d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lukasmu/laravel-rickroll/zipball/19f1108519209dc862ea205f84c93d5dc25817d0",
+                "reference": "19f1108519209dc862ea205f84c93d5dc25817d0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4.2",
+                "orchestra/testbench": "^4.0|^5.0|^6.0",
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LukasMu\\Rickroll\\RickrollServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LukasMu\\Rickroll\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lukas Müller",
+                    "email": "hello@lukasmu.com",
+                    "homepage": "https://lukasmu.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Rickroll people trying to break into your Laravel site",
+            "homepage": "https://github.com/lukasmu/laravel-rickroll",
+            "keywords": [
+                "astley",
+                "laravel",
+                "lukasmu",
+                "rick",
+                "rickroll"
+            ],
+            "support": {
+                "issues": "https://github.com/lukasmu/laravel-rickroll/issues",
+                "source": "https://github.com/lukasmu/laravel-rickroll/tree/v1.0.2"
+            },
+            "time": "2021-01-28T13:07:59+00:00"
         },
         {
             "name": "monolog/monolog",
