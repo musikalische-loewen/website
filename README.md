@@ -1,4 +1,4 @@
-# Musikverein "Musikalische Löwen" Nentershausen
+# Website of Musikverein "Musikalische Löwen" Nentershausen
 
 This repostiory contains the code for the website of the Musikverein "Musikalische Löwen" Nentershausen. Happy coding!
 
