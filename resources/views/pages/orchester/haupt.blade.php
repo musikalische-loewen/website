@@ -2,10 +2,6 @@
 
 @section('title', 'Blasorchester')
 @section('image', asset('images/archive/large/2019_konzert_circus_c.jpg'))
-@section('abstract')
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-@endsection
 
 @section('main')
     <div class="container mt-5 mb-4" id="lightgallery">
