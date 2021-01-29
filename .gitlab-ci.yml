@@ -5,7 +5,9 @@ image: lorisleiva/laravel-docker:7.4
   ssh-add <(echo "$SSH_PRIVATE_KEY")
   mkdir -p ~/.ssh
   chmod 700 ~/.ssh
-  [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  ls ~/.ssh
+  ssh-keyscan (echo "$DEPLOYMENT_HOST") >> ~/.ssh/known_hosts
+  chmod 644 ~/.ssh/known_hosts
 
 .change_file_permissions: &change_file_permissions |
   find . -type f -not -path "./vendor/*" -exec chmod 664 {} \;
@@ -110,10 +112,6 @@ deployer:
   dependencies:
     - composer
     - npm
-    - sensiolabs
-    - phpcs
-    - phpcpd
-    - phpunit
   script:
     - *init_ssh
     - *change_file_permissions
