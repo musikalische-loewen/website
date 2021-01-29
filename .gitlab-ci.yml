@@ -14,18 +14,18 @@ composer:
   script:
     - php -v
     - composer -V
-    - composer create-project --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+    - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+    - cp .env.testing .env
+    - php artisan key:generate
   artifacts:
     paths:
       - vendor
       - .env
-      - database/database.sqlite
     expire_in: 1 days
     when: always
   cache:
     paths:
       - vendor
-      - database/database.sqlite
 
 npm:
   stage: preparation
@@ -41,15 +41,15 @@ npm:
     paths:
       - node_modules
 
-migrating:
+migrations:
   stage: building
   dependencies:
     - composer
   script:
+    - php -r "new SQLite3('database/database.sqlite');"
     - php artisan migrate:fresh
   artifacts:
     paths:
-      - storage/logs
       - database/database.sqlite
     expire_in: 1 days
     when: always
@@ -63,7 +63,7 @@ mix:
     - npm
   script:
     - npm --version
-    - npm run mix --production
+    - npm run prod
   artifacts:
     paths:
       - public/css/
@@ -72,12 +72,19 @@ mix:
       - public/mix-manifest.json
     expire_in: 1 days
     when: always
+  cache:
+    paths:
+      - public/css/
+      - public/js/
+      - public/fonts/
+      - public/mix-manifest.json
 
 phpunit:
   stage: testing
   dependencies:
     - composer
-    - migrating
+    - migrations
+    - mix
   script:
     - ./vendor/phpunit/phpunit/phpunit -v  --coverage-text --colors=never --stderr
   artifacts:
