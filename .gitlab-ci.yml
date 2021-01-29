@@ -87,6 +87,7 @@ phpunit:
     - mix
   image: chilio/laravel-dusk-ci:php-7.4
   script:
+    - chrome-system-check
     - start-nginx-ci-project
     - ./vendor/phpunit/phpunit/phpunit -v  --coverage-text --colors=never --stderr
   artifacts:
