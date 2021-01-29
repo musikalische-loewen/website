@@ -33,7 +33,16 @@ class PostSync implements ShouldQueue
         $medias = collect($profile->getMedias())->take(5);
 
         // Insert or update posts
-        $attributes = ['shortcode', 'typeName', 'thumbnailSrc', 'displaySrc', 'link', 'caption', 'accessibilityCaption', 'date'];
+        $attributes = [
+            'shortcode',
+            'typeName',
+            'thumbnailSrc',
+            'displaySrc',
+            'link',
+            'caption',
+            'accessibilityCaption',
+            'date'
+        ];
         $medias->each(function ($media) use ($attributes) {
             $post = Post::withTrashed()->firstOrNew(['id' => $media->getId()]);
 

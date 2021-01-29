@@ -15,7 +15,7 @@ abstract class TestCase extends BaseTestCase
     public function assertValidHtml($html)
     {
         libxml_use_internal_errors(true);
-        $dom = New DOMDocument();
+        $dom = new DOMDocument();
         $dom->loadHTML($html);
         $errors = collect(libxml_get_errors());
         $errors = $errors->filter(function ($error) {

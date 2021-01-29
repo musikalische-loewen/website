@@ -17,10 +17,12 @@ class PagesController extends Controller
         $path = str_replace('/', '.', $request->path);
         $view_a = sprintf('pages.%s', $path);
         $view_b = sprintf('pages.%s.index', $path);
-        if (view()->exists($view_a))
+        if (view()->exists($view_a)) {
             return view($view_a);
-        if (view()->exists($view_b))
+        }
+        if (view()->exists($view_b)) {
             return view($view_b);
+        }
         abort(404);
     }
 }

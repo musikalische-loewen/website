@@ -91,6 +91,7 @@
             "@php artisan key:generate --ansi",
             "@php artisan storage:link"
         ],
-        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+        "style-test": "vendor/bin/phpcs",
+        "style-fix": "vendor/bin/phpcbf"
     }
 }
