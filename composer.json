@@ -36,8 +36,11 @@
         "spatie/laravel-honeypot": "^3.0"
     },
     "require-dev": {
+        "ext-libxml": "*",
+        "ext-dom": "*",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
+        "laravel/dusk": "^6.11",
         "laravel/sail": "^1.0.1",
         "laravel/telescope": "^4.4",
         "mockery/mockery": "^1.4.2",

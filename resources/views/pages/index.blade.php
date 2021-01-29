@@ -15,7 +15,7 @@
                     <span></span>
                     <span></span>
                     <span></span>
-                    Mehr Infos & News
+                    Mehr Infos &amp; News
                 </a>
             </div>
         </div>
