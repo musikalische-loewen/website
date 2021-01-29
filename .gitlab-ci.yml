@@ -60,9 +60,9 @@ phpunit:
     - phpunit --coverage-text --colors=never --stderr
   artifacts:
     paths:
-      - /storage/logs
-      - /tests/Browser/screenshots
-      - /tests/Browser/console
+      - storage/logs
+      - tests/Browser/screenshots
+      - tests/Browser/console
     expire_in: 1 month
     when: on_failure
 
