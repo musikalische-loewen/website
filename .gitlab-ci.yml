@@ -15,7 +15,7 @@ composer:
     - php -v
     - composer -V
     - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
-    - cp .env.testing .env
+    - cp .env.example .env
     - php -r "new SQLite3('database/database.sqlite');"
     - php artisan key:generate
     - php artisan migrate:fresh
