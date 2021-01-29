@@ -85,7 +85,7 @@ phpunit:
     - composer
     - migrations
     - mix
-  image: chilio/laravel-dusk-ci:stable
+  image: chilio/laravel-dusk-ci::php-7.4
   script:
     - start-nginx-ci-project
     - ./vendor/phpunit/phpunit/phpunit -v  --coverage-text --colors=never --stderr
