@@ -4,10 +4,6 @@ stages:
 
 image: lorisleiva/laravel-docker:7.4
 
-before_script:
-  - apk add chromium-chromedriver -y
-  - apk add chromium -y
-
 composer:
   stage: building
   cache:
@@ -53,6 +49,9 @@ phpunit:
   stage: testing
   dependencies:
     - composer
+  before_script:
+    - apk add chromium-chromedriver
+    - apk add chromium
   script:
     - chromedriver 2>&1 &
     - sleep 5
