@@ -79,9 +79,10 @@ phpcpd:
 
 phpcs:
   stage: testing
-  dependencies: []
+  dependencies:
+    - composer
   script:
-    - phpcs --standard=PSR2 --extensions=php --ignore=app/Support/helpers.php app
+    - composer style-test
 
 sensiolabs:
   stage: testing
