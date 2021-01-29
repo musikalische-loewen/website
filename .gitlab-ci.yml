@@ -1,79 +1,49 @@
 stages:
-  - preparation
   - building
   - testing
-  - security
 
-image: edbizarro/gitlab-ci-pipeline-php:7.4-alpine
+image: lorisleiva/laravel-docker:7.4
 
-cache:
-  key: $CI_COMMIT_REF_NAME
+before_script:
+  - apk add chromium-chromedriver -y
+  - apk add chromium -y
 
 composer:
-  stage: preparation
+  stage: building
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-composer
+    paths:
+      - vendor/
+      - database/database.sqlite
   script:
     - php -v
     - composer -V
     - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
     - cp .env.testing .env
+    - php -r "new SQLite3('database/database.sqlite');"
     - php artisan key:generate
+    - php artisan migrate:fresh
   artifacts:
+    expire_in: 1 month
     paths:
-      - vendor
+      - vendor/
       - .env
-    expire_in: 1 days
-    when: always
-  cache:
-    paths:
-      - vendor
+      - database/database.sqlite
 
 npm:
-  stage: preparation
+  stage: building
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}-npm
+    paths:
+      - node_modules/
   script:
     - npm --version
     - npm install
-  artifacts:
-    paths:
-      - node_modules
-    expire_in: 1 days
-    when: always
-  cache:
-    paths:
-      - node_modules
-
-migrations:
-  stage: building
-  dependencies:
-    - composer
-  script:
-    - php -r "new SQLite3('database/database.sqlite');"
-    - php artisan migrate:fresh
-  artifacts:
-    paths:
-      - database/database.sqlite
-    expire_in: 1 days
-    when: always
-  cache:
-    paths:
-      - database/database.sqlite
-
-mix:
-  stage: building
-  dependencies:
-    - npm
-  script:
-    - npm --version
     - npm run prod
   artifacts:
+    expire_in: 1 month
     paths:
-      - public/css/
-      - public/js/
-      - public/fonts/
-      - public/mix-manifest.json
-    expire_in: 1 days
-    when: always
-  cache:
-    paths:
+      - node_modules/
       - public/css/
       - public/js/
       - public/fonts/
@@ -83,19 +53,17 @@ phpunit:
   stage: testing
   dependencies:
     - composer
-    - migrations
-    - mix
-  image: chilio/laravel-dusk-ci:php-7.4
   script:
-    - chrome-system-check
-    - start-nginx-ci-project
-    - ./vendor/phpunit/phpunit/phpunit -v  --coverage-text --colors=never --stderr
+    - chromedriver 2>&1 &
+    - sleep 5
+    - nohup php artisan serve &
+    - phpunit --coverage-text --colors=never --stderr
   artifacts:
     paths:
-      - ./storage/logs
-      - ./tests/Browser/screenshots
-      - ./tests/Browser/console
-    expire_in: 1 days
+      - /storage/logs
+      - /tests/Browser/screenshots
+      - /tests/Browser/console
+    expire_in: 1 month
     when: on_failure
 
 phpcpd:
@@ -105,17 +73,25 @@ phpcpd:
     - php phpcpd.phar app/ --min-lines=50
   dependencies: []
   cache:
+    key: ${CI_COMMIT_REF_SLUG}-phpcpd
     paths:
       - phpcpd.phar
 
+phpcs:
+  stage: testing
+  dependencies: []
+  script:
+    - phpcs --standard=PSR2 --extensions=php --ignore=app/Support/helpers.php app
+
 sensiolabs:
-  stage: security
+  stage: testing
   script:
     - test -d security-checker || git clone https://github.com/sensiolabs/security-checker.git
     - cd security-checker
-    - composer install
     - php security-checker security:check ../composer.lock
-  dependencies: []
+  dependencies:
+    - composer
   cache:
+    key: ${CI_COMMIT_REF_SLUG}-sensiolabs
     paths:
       - security-checker
