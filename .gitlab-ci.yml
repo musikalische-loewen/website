@@ -2,7 +2,7 @@ image: lorisleiva/laravel-docker:7.4
 
 .init_ssh: &init_ssh |
   eval $(ssh-agent -s)
-  echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  ssh-add <(echo "$SSH_PRIVATE_KEY")
   mkdir -p ~/.ssh
   chmod 700 ~/.ssh
   [[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
@@ -79,6 +79,7 @@ phpcpd:
     - test -f phpcpd.phar || curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar
     - php phpcpd.phar app/ --min-lines=50
   dependencies: []
+  needs: []
   cache:
     key: ${CI_COMMIT_REF_SLUG}-phpcpd
     paths:
