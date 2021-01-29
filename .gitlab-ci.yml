@@ -49,6 +49,7 @@ phpunit:
   stage: testing
   dependencies:
     - composer
+    - npm
   before_script:
     - apk add chromium-chromedriver
     - apk add chromium
