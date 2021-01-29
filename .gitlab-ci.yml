@@ -1,0 +1,109 @@
+stages:
+  - preparation
+  - building
+  - testing
+  - security
+
+image: edbizarro/gitlab-ci-pipeline-php:7.4-alpine
+
+cache:
+  key: $CI_COMMIT_REF_NAME
+
+composer:
+  stage: preparation
+  script:
+    - php -v
+    - composer -V
+    - composer create-project --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+  artifacts:
+    paths:
+      - vendor
+      - .env
+      - database/database.sqlite
+    expire_in: 1 days
+    when: always
+  cache:
+    paths:
+      - vendor
+      - database/database.sqlite
+
+npm:
+  stage: preparation
+  script:
+    - npm --version
+    - npm install
+  artifacts:
+    paths:
+      - node_modules
+    expire_in: 1 days
+    when: always
+  cache:
+    paths:
+      - node_modules
+
+migrating:
+  stage: building
+  dependencies:
+    - composer
+  script:
+    - php artisan migrate:fresh
+  artifacts:
+    paths:
+      - storage/logs
+      - database/database.sqlite
+    expire_in: 1 days
+    when: always
+  cache:
+    paths:
+      - database/database.sqlite
+
+mix:
+  stage: building
+  dependencies:
+    - npm
+  script:
+    - npm --version
+    - npm run mix --production
+  artifacts:
+    paths:
+      - public/css/
+      - public/js/
+      - public/fonts/
+      - public/mix-manifest.json
+    expire_in: 1 days
+    when: always
+
+phpunit:
+  stage: testing
+  dependencies:
+    - composer
+    - migrating
+  script:
+    - ./vendor/phpunit/phpunit/phpunit -v  --coverage-text --colors=never --stderr
+  artifacts:
+    paths:
+      - ./storage/logs
+    expire_in: 1 days
+    when: on_failure
+
+phpcpd:
+  stage: testing
+  script:
+    - test -f phpcpd.phar || curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar
+    - php phpcpd.phar app/ --min-lines=50
+  dependencies: []
+  cache:
+    paths:
+      - phpcpd.phar
+
+sensiolabs:
+  stage: security
+  script:
+    - test -d security-checker || git clone https://github.com/sensiolabs/security-checker.git
+    - cd security-checker
+    - composer install
+    - php security-checker security:check ../composer.lock
+  dependencies: []
+  cache:
+    paths:
+      - security-checker
