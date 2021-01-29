@@ -12,7 +12,7 @@ image: lorisleiva/laravel-docker:7.4
   find . -type d -not -path "./vendor/*" -exec chmod 775 {} \;
 
 composer:
-  stage: building
+  stage: build
   cache:
     key: ${CI_COMMIT_REF_SLUG}-composer
     paths:
@@ -34,7 +34,7 @@ composer:
       - database/database.sqlite
 
 npm:
-  stage: building
+  stage: build
   cache:
     key: ${CI_COMMIT_REF_SLUG}-npm
     paths:
@@ -53,7 +53,7 @@ npm:
       - public/mix-manifest.json
 
 phpunit:
-  stage: testing
+  stage: test
   dependencies:
     - composer
     - npm
@@ -74,7 +74,7 @@ phpunit:
     when: on_failure
 
 phpcpd:
-  stage: testing
+  stage: test
   script:
     - test -f phpcpd.phar || curl -L https://phar.phpunit.de/phpcpd.phar -o phpcpd.phar
     - php phpcpd.phar app/ --min-lines=50
@@ -85,14 +85,14 @@ phpcpd:
       - phpcpd.phar
 
 phpcs:
-  stage: testing
+  stage: test
   dependencies:
     - composer
   script:
     - composer style-test
 
 sensiolabs:
-  stage: testing
+  stage: test
   script:
     - test -d security-checker || git clone https://github.com/sensiolabs/security-checker.git
     - cd security-checker
@@ -105,7 +105,7 @@ sensiolabs:
       - security-checker
 
 deployer:
-  stage: deploying
+  stage: deploy
   dependencies:
     - composer
     - npm
