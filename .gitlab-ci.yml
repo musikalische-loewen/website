@@ -85,11 +85,15 @@ phpunit:
     - composer
     - migrations
     - mix
+  image: chilio/laravel-dusk-ci:stable
   script:
+    - start-nginx-ci-project
     - ./vendor/phpunit/phpunit/phpunit -v  --coverage-text --colors=never --stderr
   artifacts:
     paths:
       - ./storage/logs
+      - ./tests/Browser/screenshots
+      - ./tests/Browser/console
     expire_in: 1 days
     when: on_failure
 
