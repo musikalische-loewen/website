@@ -12,6 +12,9 @@ image: lorisleiva/laravel-docker:7.4
   find . -type f -not -path "./vendor/*" -exec chmod 664 {} \;
   find . -type d -not -path "./vendor/*" -exec chmod 775 {} \;
 
+include:
+  - template: Dependency-Scanning.gitlab-ci.yml
+
 composer:
   stage: build
   cache:
