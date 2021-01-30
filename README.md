@@ -1,5 +1,8 @@
 # Website of Musikverein "Musikalische Löwen" Nentershausen
 
+[![coverage report](https://gitlab.com/lukasmu/loewen/badges/master/coverage.svg)](https://gitlab.com/lukasmu/loewen/-/commits/master)
+[![pipeline status](https://gitlab.com/lukasmu/loewen/badges/master/pipeline.svg)](https://gitlab.com/lukasmu/loewen/-/commits/master)
+
 This repostiory contains the code for the website of the Musikverein "Musikalische Löwen" Nentershausen. Happy coding!
 
 ## About
