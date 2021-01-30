@@ -111,9 +111,6 @@ deployer:
   dependencies:
     - composer
     - npm
-  needs:
-    - composer
-    - npm
   script:
     - *init_ssh
     - *change_file_permissions
