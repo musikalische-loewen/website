@@ -22,9 +22,9 @@ It is assumed that you are using Windows 10 as operating system. In case that yo
 1. Make sure to install a GIT client (e.g. [the native one](https://git-scm.com/downloads)) and an IDE of your choice (e.g. [PHPStorm](https://www.jetbrains.com/phpstorm/)).
 2. Then install Visual C++ Redistributable for Visual Studio, PHP and Composer as explained on [https://devanswers.co/install-composer-php-windows-10/](https://devanswers.co/install-composer-php-windows-10/]). Please do not yet install PHP 8 but PHP 7 for the time being.
 3. Go to the directory where you installed PHP, search for the php.ini file and enable the extensions pdo_sqlitee, sqlite3 and fileinfo by removing the semicolon before the lines extension=pdo_sqlite, extension=sqlite3 and extension=fileinfo. Save the php.ini file.
-4. Then clone this repository to your computer. Simply run ```git clone https://gitlab.com/lukasmu/loewen.git``` in the directory of your choice. Afterwards switch to the cloned directory by typing ```cd loewen``.
+4. Then clone this repository to your computer. Simply run ```git clone https://gitlab.com/lukasmu/loewen.git``` in the directory of your choice. Afterwards switch to the cloned directory by typing ```cd loewen```.
 5. Run  ```composer create-project``` to finalize the installation of the 🦁 website. This might take a minute or two.
-6. Run ```php artisan serve``` to startup your local development server. Click on the link that appears on your console to setup WordPress. If you want to stop the server press CTRL and C.
+6. Run ```php artisan serve``` to startup your local development server. If you want to stop the server press CTRL and C.
 7. Run ```php artisan migrate:refresh --seed``` to initialize a development database.
 
 ## Testing
