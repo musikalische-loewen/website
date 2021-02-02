@@ -24,6 +24,7 @@ abstract class TestCase extends BaseTestCase
                 "Tag header invalid\n",
                 "Tag main invalid\n",
                 "Tag footer invalid\n",
+                "Tag section invalid\n",
             ]);
         });
         if ($errors->count() > 0) {
@@ -32,7 +33,8 @@ abstract class TestCase extends BaseTestCase
                 return implode("\n", [
                     trim($lines[$error->line-2]),
                     trim($lines[$error->line-1]),
-                    trim($lines[$error->line])
+                    trim($lines[$error->line]),
+                    sprintf('Error: %s', $error->message)
                 ]);
             });
             $this->fail(sprintf("The HTML is probably invalid near:\n%s", $lines->implode("\n\nAnd near:\n")));
