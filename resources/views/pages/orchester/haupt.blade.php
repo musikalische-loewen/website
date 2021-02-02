@@ -34,8 +34,8 @@
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
-                    <a href="{{ asset('images/archive/large/2012_konzert_e.jpg') }}" class="card-img-wrap" data-sub-html="Pfingstkonzert 2012: Concierto de Calella">
-                        <img src="{{ asset('images/archive/medium/2012_konzert_e.jpg') }}" class="card-img-top" alt="Orchester">
+                    <a href="https://www.youtube.com/watch?v=91un-HPcSxU" class="card-img-wrap" data-sub-html="Klopapierchallenge 2020">
+                        <img src="{{ asset('images/archive/medium/youtube-klopapier.jpg') }}" class="card-img-top" alt="Orchester">
                     </a>
                 </div>
             </div>
@@ -57,6 +57,13 @@
                 <div class="card shadow-sm">
                     <a href="{{ asset('images/archive/large/header.jpg') }}" class="card-img-wrap" data-sub-html="Pfingstkonzert 2014: Very british!">
                         <img src="{{ asset('images/archive/medium/header.jpg') }}" class="card-img-top" alt="Orchester">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <a href="{{ asset('images/archive/large/2012_konzert_e.jpg') }}" class="card-img-wrap" data-sub-html="Pfingstkonzert 2012: Concierto de Calella">
+                        <img src="{{ asset('images/archive/medium/2012_konzert_e.jpg') }}" class="card-img-top" alt="Orchester">
                     </a>
                 </div>
             </div>

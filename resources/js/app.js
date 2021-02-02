@@ -6,6 +6,7 @@ import 'bootstrap';
 
 // Import Lightgallery scripts
 import 'lightgallery.js';
+import 'lg-video.js';
 
 // Import imagesLoaded
 window.imagesLoaded = require('imagesloaded');
