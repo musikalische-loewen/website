@@ -142,8 +142,11 @@
                     </div>
 
                     <div class="mb-3">
-                        Ich habe die <a href="#">Datenschutzerklärung</a> gelesen und bin mit deren Geltung einverstanden.<br>
+                        Ich habe die <a href="{{ url('datenschutz') }}">Datenschutzerklärung</a> gelesen und bin mit deren Geltung einverstanden.<br>
+                        {{--
+                        TODO: Insert the following sentence once PDF is available
                         Ebenso erkenne ich die <a href="#">Satzung</a> als bindend an.
+                        --}}
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-round btn-block">Mitgliedschaftsformular absenden</button>
