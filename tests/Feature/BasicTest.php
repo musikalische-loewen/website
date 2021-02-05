@@ -17,7 +17,7 @@ class BasicTest extends TestCase
         $this->get('/verein/ausbildung')->assertStatus(200);
         $this->get('/verein/chronik')->assertStatus(200);
         $this->get('/verein/presse')->assertStatus(200);
-        $this->get('/gallerie')->assertStatus(200);
+        $this->get('/galerie')->assertStatus(200);
         $this->get('/kontakt')->assertStatus(200);
         $this->get('/intern')->assertStatus(200);
         $this->get('/datenschutz')->assertStatus(200);
@@ -35,7 +35,7 @@ class BasicTest extends TestCase
         $this->assertValidHtml($this->get('/verein/ausbildung')->getContent());
         $this->assertValidHtml($this->get('/verein/chronik')->getContent());
         $this->assertValidHtml($this->get('/verein/presse')->getContent());
-        $this->assertValidHtml($this->get('/gallerie')->getContent());
+        $this->assertValidHtml($this->get('/galerie')->getContent());
         $this->assertValidHtml($this->get('/kontakt')->getContent());
         $this->assertValidHtml($this->get('/intern')->getContent());
         $this->assertValidHtml($this->get('/datenschutz')->getContent());
