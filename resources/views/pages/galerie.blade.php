@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('title', 'Gallerie')
+@section('title', 'Galerie')
 @section('image', asset('images/archive/large/2012_konzert_e.jpg'))
 @section('abstract')
     Auf dieser Seite finden Sie einige Schnappschüsse auf dem Vereinsleben.

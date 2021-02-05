@@ -49,9 +49,9 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a href="{{ url('gallerie') }}" class="nav-link">
+                <a href="{{ url('galerie') }}" class="nav-link">
                     <i class="fa fa-image"></i>
-                    Gallerie
+                    Galerie
                 </a>
             </li>
             <li class="nav-item">
