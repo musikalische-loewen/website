@@ -67,6 +67,13 @@
                     </a>
                 </div>
             </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <a href="https://www.youtube.com/watch?v=WoSVMh1_FDs" class="card-img-wrap" data-sub-html="Karneval 2021: Der Schmucke Prinz-Corona Edition">
+                        <img src="{{ asset('images/archive/medium/youtube-karneval.jpg') }}" class="card-img-top" alt="Orchester">
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 @endsection
