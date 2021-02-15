@@ -24,6 +24,13 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-5 mb-5">
+        <div class="card shadow-sm">
+            <a href="https://www.youtube.com/watch?v=WoSVMh1_FDs" class="card-img-wrap" data-sub-html="Karneval 2021: Der Schmucke Prinz-Corona Edition">
+                <img src="{{ asset('images/archive/medium/youtube-karneval.jpg') }}" class="card-img-top" alt="Orchester">
+            </a>
+        </div>
+    </div>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
@@ -46,7 +53,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-8 mb-4">
+            <div class="col-md-4 mb-4">
                 <div class="card shadow-sm">
                     <a href="{{ asset('images/archive/large/2020_karneval_c.jpg') }}" class="card-img-wrap" data-sub-html="Veilchendienstagszug 2020 in Heimbach-Weis">
                         <img src="{{ asset('images/archive/medium/2020_karneval_c.jpg') }}" class="card-img-top" alt="Orchester">
@@ -64,13 +71,6 @@
                 <div class="card shadow-sm">
                     <a href="{{ asset('images/archive/large/2012_konzert_e.jpg') }}" class="card-img-wrap" data-sub-html="Pfingstkonzert 2012: Concierto de Calella">
                         <img src="{{ asset('images/archive/medium/2012_konzert_e.jpg') }}" class="card-img-top" alt="Orchester">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card shadow-sm">
-                    <a href="https://www.youtube.com/watch?v=WoSVMh1_FDs" class="card-img-wrap" data-sub-html="Karneval 2021: Der Schmucke Prinz-Corona Edition">
-                        <img src="{{ asset('images/archive/medium/youtube-karneval.jpg') }}" class="card-img-top" alt="Orchester">
                     </a>
                 </div>
             </div>
