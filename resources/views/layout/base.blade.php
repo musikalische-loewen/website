@@ -19,7 +19,7 @@
         <link rel="preload" as="font" href="{{ asset('fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2') }}" type="font/woff2" crossorigin>
 
         <link href="{{ asset('images/logos/logo_black.png') }}" rel="icon" type="image/png">
-        <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
+        <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     </head>
 
     <body class="d-flex flex-column">
