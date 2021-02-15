@@ -23,6 +23,11 @@
 @endsection
 
 @section('main')
+
+    <br>
+   <p align="middle">
+    <iframe width="600" height="337,5" src="https://www.youtube.com/embed/WoSVMh1_FDs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+   </p>
     <div class="container py-4" id="news">
         <div class="row row-cols-1 row-cols-md-3 g-4" id="lightgallery">
             <div class="col">
