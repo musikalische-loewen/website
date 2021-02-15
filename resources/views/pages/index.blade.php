@@ -2,6 +2,8 @@
 
 @section('navbar-fixed', True)
 
+@section('description', 'Wir sind ein junger Musikverein aus Nentershausen im Westerwald und bieten Ihnen Musik für die verschiedensten Anlässe. Gerne kommen wir auch zu Ihrer Veranstaltung!')
+
 @section('header')
     <header class="background-wrapper background-filter-light" style="min-height: 125vh;">
         <div class="background-image" style="background-image: url({{ asset('images/archive/large/header.jpg') }});"></div>
@@ -23,7 +25,6 @@
 @endsection
 
 @section('main')
-
     <div class="container py-4" id="news">
         <div class="row">
             <div class="col-md-6 mx-auto mb-4">

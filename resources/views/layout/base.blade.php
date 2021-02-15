@@ -4,14 +4,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#233876" {{-- TODO: Adjust theme color to primary color from CSS --}} />
+        <meta name="theme-color" content="#233876">
 
-        <title>
-            {{ config('app.name') }}
-            @hasSection('title')
-                - @yield('title')
-            @endif
-        </title>
+        @hasSection('description')
+            <meta name="description" content="@yield('description')">
+        @elseif(View::hasSection('abstract'))
+            <meta name="description" content="{{ trim(View::yieldContent('abstract')) }}">
+        @endif
+
+        <title>{{ config('app.name') }}@hasSection('title') - @yield('title')@endif</title>
 
         <link rel="preload" as="font" href="{{ asset('fonts/fira-sans-v10-latin-regular.woff2') }}" type="font/woff2" crossorigin>
         <link rel="preload" as="font" href="{{ asset('fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2') }}" type="font/woff2" crossorigin>
