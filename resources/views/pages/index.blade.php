@@ -10,7 +10,7 @@
         <div class="background-text container d-flex flex-column align-items-center" style="height: 100vh;">
             <div class="my-auto text-center">
                 <h1>Willkommen...</h1>
-                <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen e.V.!</h2>
+                <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
             </div>
             <div class="scroll pb-5">
                 <a class="text-white" href="#news">
