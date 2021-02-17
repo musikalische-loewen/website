@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('title', 'Blasorchester')
-@section('image', asset('images/archive/large/2019_konzert_circus_c.jpg'))
+@section('image', asset('images/archive/large/2017_konzert_stratosphaere.jpg'))
 
 @section('main')
     <div class="container mt-5 mb-4" id="lightgallery">
@@ -34,8 +34,8 @@
             </div>
             <div class="col col-md-8 mb-4">
                 <div class="card shadow-sm">
-                    <a href="{{ asset('images/archive/large/2019_konzert_circus_c.jpg') }}" class="card-img-wrap" data-sub-html="Pfingstkonzert 2019: Circus in Nentershausen">
-                        <img src="{{ asset('images/archive/medium/2019_konzert_circus_c.jpg') }}" class="card-img-top" alt="Orchester">
+                    <a href="{{ asset('images/archive/large/2017_konzert_stratosphaere.jpg') }}" class="card-img-wrap" data-sub-html="Pfingstkonzert 2017: Stratosphäre">
+                        <img src="{{ asset('images/archive/medium/2017_konzert_stratosphaere.jpg') }}" class="card-img-top" alt="Orchester">
                     </a>
                 </div>
             </div>
