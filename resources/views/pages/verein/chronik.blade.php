@@ -96,7 +96,7 @@
         <p>Dort betreibt nämlich die Familie unseres ehemaligen Vorstandsmitgliedes Anne-Marie Zenzen ein Weingut. Und die bieten auch Verköstigung von Besuchergruppen an! </p>
         <p>Dann holte uns schon bald wieder die Pandemie ein. Wir mussten den Probebetrieb wieder einstellen. Weder Martinszüge, noch Weihnachtsmärkte konnten bespielt werden. Und unsere legendäre Weihnachtsfeier musste 2020 auch seit Menschengedenken zum ersten Mal entfallen. </p>
         <p>Anfang 2021 haben wir dann die Ärmel wieder hochgekrempelt und begannen – im Stil der Zeit – zum ersten Mal ein Stück digital in räumlicher Trennung einzuspielen. </p>
-        <p>Seit dem Umbau der alten Turnhalle in Nentershausen zum Bürgerhaus im Jahre 2005 steht dem Musikverein ein …qm großer Raum für die Vereins- und Probenarbeit zur Verfügung. Durch den Einbau eines Thekenbereiches haben wir auch eine gemütliche Ecke dort bekommen. </p>
+        <p>Seit dem Umbau der alten Turnhalle in Nentershausen zum Bürgerhaus im Jahre 2005 steht dem Musikverein ein großer Raum für die Vereins- und Probenarbeit zur Verfügung. Durch den Einbau eines Thekenbereiches haben wir auch eine gemütliche Ecke dort bekommen. </p>
         <p>Mit der Anschaffung eines Kfz.-Anhängers sind wir auch mit unseren großen Instrumenten wie Schlagzeug und Kesselpauken mobiler geworden. </p>
 
 
