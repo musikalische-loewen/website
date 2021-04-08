@@ -44,6 +44,12 @@ npm:
     key: ${CI_COMMIT_REF_SLUG}-npm
     paths:
       - node_modules/
+  before_script:
+    - apt-get -yq update
+    - apt-get -yq install software-properties-common
+    - add-apt-repository -y ppa:deadsnakes/ppa
+    - apt-get -yq update
+    - apt-get -yq install python3.9
   script:
     - npm --version
     - npm install
