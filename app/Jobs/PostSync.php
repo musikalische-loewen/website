@@ -30,7 +30,9 @@ class PostSync implements ShouldQueue
         $api = new Api($cache_pool);
         $api->login(config('services.instagram.username'), config('services.instagram.password'));
         $profile = $api->getProfile(config('services.instagram.profile'));
-        $medias = collect($profile->getMedias())->take(5);
+        $medias = collect($profile->getMedias())->filter(function ($value) {
+            return $value->isVideo() == false;
+        })->take(5);
 
         // Insert or update posts
         $attributes = [
@@ -47,7 +49,7 @@ class PostSync implements ShouldQueue
             $post = Post::withTrashed()->firstOrNew(['id' => $media->getId()]);
 
             foreach ($attributes as $attribute) {
-                $post->{$attribute} = $media->{'get'.ucfirst($attribute)}();
+                $post->{$attribute} = $media->{'get'.ucfirst($attribute)}() ?? '';
             }
             $post->deleted_at = null;
             $post->save();
