@@ -15,7 +15,7 @@
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
                         <p class="card-text">
-                            Dirigent: Jannik Ferdinand<br>
+                            Dirigent: zurzeit Wolfgang Lang<br>
                             Probe: Jeden Freitag von 17:30 Uhr bis 19:00 Uhr
                         </p>
                     </div>

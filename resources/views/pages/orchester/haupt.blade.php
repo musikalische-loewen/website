@@ -10,7 +10,7 @@
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
                         <p class="card-text">
-                            Dirigent: Stephan Kramer<br>
+                            Dirigent: Lukas Oberbauer<br>
                             Probe: Jeden Freitag von 19:15 Uhr bis 21:15 Uhr
                         </p>
                     </div>
