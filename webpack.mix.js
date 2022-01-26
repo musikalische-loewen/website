@@ -26,23 +26,7 @@ mix.js('resources/js/app.js', 'public/js')
 if (mix.inProduction()) {
     mix.sourceMaps();
     mix.version();
-    mix.then(function () {
-        // Fonts versioned by processCssUrls in the CSS files use MD5 while Mix uses a different hash versioning system.
-        // This workaround adds font entries using the MD5 scheme so that all files are versioned properly with the same scheme.
-        jsonfile.readFile(mixManifest, function (err, obj) {
-            const newJson = {};
-            _.forIn(obj, function (value, key) {
-                newJson[key] = value;
-            });
-            fs.readdir('public/fonts', function (err, files) {
-                files.forEach(function (file, index) {
-                    const path = 'public/fonts/' + file;
-                    newJson['/fonts/' + file] = '/fonts/' + file + "?" + md5(fs.readFileSync(path));
-                });
-                jsonfile.writeFile(mixManifest, newJson, {spaces: 2}, function (err) {
-                    if (err) console.error(err);
-                });
-            });
-        });
+    mix.options({
+        processCssUrls: false, // TODO: This option should not be set to false but required due to https://github.com/laravel-mix/laravel-mix/issues/2025 at the moment
     });
 }
