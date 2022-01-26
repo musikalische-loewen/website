@@ -26,7 +26,4 @@ mix.js('resources/js/app.js', 'public/js')
 if (mix.inProduction()) {
     mix.sourceMaps();
     mix.version();
-    mix.options({
-        processCssUrls: false, // TODO: This option should not be set to false but required due to https://github.com/laravel-mix/laravel-mix/issues/2025 at the moment
-    });
 }
