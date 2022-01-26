@@ -1,4 +1,9 @@
 const mix = require('laravel-mix');
+const _ = require('lodash');
+const jsonfile = require('jsonfile');
+const fs = require('fs');
+const md5 = require('md5');
+const mixManifest = 'public/mix-manifest.json';
 require('laravel-mix-purgecss');
 
 /*
@@ -21,24 +26,23 @@ mix.js('resources/js/app.js', 'public/js')
 if (mix.inProduction()) {
     mix.sourceMaps();
     mix.version();
-    mix.webpackConfig({
-        module: {
-            rules: [{
-                // Overwriting file-loader rule for fonts in order to remove the hash (so we can pre-load without downloading it twice)
-                test: /(\.(woff2?|ttf|eot|otf)$|font.*\.svg$)/,
-                loaders: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: (path) => {
-                            if (!/node_modules|bower_components/.test(path)) {
-                                return 'fonts/[name].[ext]';
-                            }
-                            const pathUpdated = path.replace(/\\/g, '/').replace(/((.*(node_modules|bower_components))|fonts|font|assets)\//g, '');
-                            return `fonts/vendor/${pathUpdated}`;
-                        },
-                    },
-                }],
-            }],
-        },
+    mix.then(function () {
+        // Fonts versioned by processCssUrls in the CSS files use MD5 while Mix uses a different hash versioning system.
+        // This workaround adds font entries using the MD5 scheme so that all files are versioned properly with the same scheme.
+        jsonfile.readFile(mixManifest, function (err, obj) {
+            const newJson = {};
+            _.forIn(obj, function (value, key) {
+                newJson[key] = value;
+            });
+            fs.readdir('public/fonts', function (err, files) {
+                files.forEach(function (file, index) {
+                    const path = 'public/fonts/' + file;
+                    newJson['/fonts/' + file] = '/fonts/' + file + "?" + md5(fs.readFileSync(path));
+                });
+                jsonfile.writeFile(mixManifest, newJson, {spaces: 2}, function (err) {
+                    if (err) console.error(err);
+                });
+            });
+        });
     });
 }

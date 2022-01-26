@@ -31,5 +31,9 @@
         "sass": "^1.32.2",
         "sass-loader": "^10.1.0",
         "sharp-cli": "^1.14.1"
+    },
+    "dependencies": {
+        "jsonfile": "^6.1.0",
+        "md5": "^2.3.0"
     }
 }
