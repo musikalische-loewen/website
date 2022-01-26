@@ -21,3 +21,17 @@ if (!function_exists('url_get_contents')) {
         return $output;
     }
 }
+
+
+if (! function_exists('hash_url')) {
+    /**
+     * Generate a hashed URL to a file (needed as a workaround to enable font preloads(
+     *
+     * @param string $url The URL which should be hashed
+     * @return   string    The URL with a hash
+     */
+    function hash_url($url)
+    {
+        return "$url?".hash_file('md4', public_path($url));
+    }
+}
