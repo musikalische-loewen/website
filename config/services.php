@@ -34,6 +34,11 @@ return [
         'profile' => env('INSTAGRAM_PROFILE', 'musikalische.loewen'),
         'username' => env('INSTAGRAM_USERNAME'),
         'password' => env('INSTAGRAM_PASSWORD'),
+        'mail' => [
+            'host' => env('INSTAGRAM_MAIL_HOST', env('MAIL_HOST')),
+            'username' => env('INSTAGRAM_MAIL_USERNAME', env('MAIL_USERNAME')),
+            'password' => env('INSTAGRAM_MAIL_PASSWORD', env('MAIL_PASSWORD')),
+        ]
     ],
 
 ];

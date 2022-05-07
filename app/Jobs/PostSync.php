@@ -8,6 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Instagram\Api;
+use Instagram\Auth\Checkpoint\ImapClient;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 
 class PostSync implements ShouldQueue
@@ -27,8 +28,17 @@ class PostSync implements ShouldQueue
     {
         // Retrieve media from Instagram
         $cache_pool = new FilesystemAdapter('instagram', 0, storage_path('cache'));
+        $imap_client = new ImapClient(
+            config('services.instagram.mail.host').':993',
+            config('services.instagram.mail.username'),
+            config('services.instagram.mail.password')
+        );
         $api = new Api($cache_pool);
-        $api->login(config('services.instagram.username'), config('services.instagram.password'));
+        $api->login(
+            config('services.instagram.username'),
+            config('services.instagram.password'),
+            $imap_client
+        );
         $profile = $api->getProfile(config('services.instagram.profile'));
         $medias = collect($profile->getMedias())->filter(function ($value) {
             return $value->isVideo() == false;
