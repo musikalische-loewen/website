@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Models\Post;
+use GuzzleHttp\Client;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -33,7 +34,8 @@ class PostSync implements ShouldQueue
             config('services.instagram.mail.username'),
             config('services.instagram.mail.password')
         );
-        $api = new Api($cache_pool);
+        $client = new Client(['force_ip_resolve' => 'v4']);
+        $api = new Api($cache_pool, $client);
         $api->login(
             config('services.instagram.username'),
             config('services.instagram.password'),
