@@ -3,8 +3,8 @@
 @section('title', 'Kartenvorverkauf')
 @section('image', asset('images/archive/large/rich-smith-685e1B55wr0-unsplash.jpg'))
 @section('abstract')
-    Hier können Sie Karten für unser Pfingstkonzert am 5. Juni 2022 bestellen.<br><br>
-    Kinder bis zum 14. Lebensjahr haben freien Eintritt, Jugendliche vom 15. bis 17. Lebensjahr zahlen einen ermäßigt Eintrittspreis von 5€, und Erwachsense zahlen einen Eintrittspreis von 9€.<br>
+    Hier können Sie Karten für unser <a class="text-white" href="{{ asset('docs/postkarte_pfingstkonzert_2022.pdf') }}">Pfingstkonzert</a> am 5. Juni 2022 bestellen.<br><br>
+    Kinder bis zum 14. Lebensjahr haben freien Eintritt, Jugendliche vom 15. bis 17. Lebensjahr zahlen einen ermäßigt Eintrittspreis von 5€, und Erwachsene zahlen einen Eintrittspreis von 9€.<br>
     Die bestellten Karten werden für Sie an der Kasse hinterlegt.<br><br>
     Wir freuen uns auf Ihren Besuch!
 @endsection

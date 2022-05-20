@@ -35,6 +35,7 @@ class TicketMail extends Mailable implements ShouldQueue
             ->bcc('kassierer@musikalische-loewen.de')
             ->bcc('admin@musikalische-loewen.de')
             ->subject('Kartenvorverkauf')
-            ->markdown('emails.forms.tickets');
+            ->markdown('emails.forms.tickets')
+            ->attach(public_path('docs/postkarte_pfingstkonzert_2022.pdf'));
     }
 }
