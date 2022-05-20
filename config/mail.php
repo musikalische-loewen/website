@@ -90,11 +90,12 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Global "To" Address
+    | Global "To" Address (called 'tox' here because setting 'to' prevents mail
+    | from being sent to other addresses)
     |--------------------------------------------------------------------------
     */
 
-    'to' => [
+    'tox' => [
         'address' => env('MAIL_TO_ADDRESS', 'info@musikalische-loewen.de'),
         'name' => env('MAIL_TO_NAME', 'Musikalische Löwen'),
     ],

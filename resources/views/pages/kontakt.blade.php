@@ -42,7 +42,7 @@
             <div class="col-md-8 col-lg-5">
                 <div class="card shadow-sm bg-primary text-white mt-0 mb-4 py-0">
                     <div class="card-body">
-                        <p class="mb-0">Sie erreichen uns unter <a class="text-white" href="mailto:{{ config('mail.to.address') }}">{{ config('mail.to.address') }}</a>, unter <a class="text-white" href="tel:+4964854300">06485 4300</a> oder über das nachfolgende Kontaktformular.</p>
+                        <p class="mb-0">Sie erreichen uns unter <a class="text-white" href="mailto:{{ config('mail.tox.address') }}">{{ config('mail.tox.address') }}</a>, unter <a class="text-white" href="tel:+4964854300">06485 4300</a> oder über das nachfolgende Kontaktformular.</p>
                     </div>
                 </div>
                 @if(session('success'))

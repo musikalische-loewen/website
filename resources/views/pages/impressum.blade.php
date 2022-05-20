@@ -13,7 +13,7 @@
         </p>
         <p>
             Telefon: <a href="tel:+4964854300">06485 4300</a><br>
-            E-Mail: <a href="mailto:{{ config('mail.to.address') }}">{{ config('mail.to.address') }}</a>
+            E-Mail: <a href="mailto:{{ config('mail.tox.address') }}">{{ config('mail.tox.address') }}</a>
         </p>
         <p>
             Vertreten durch: Bernd Reifenscheidt (1. Vorsitzender), Achim Gläser (2. Vorsitzender)<br>

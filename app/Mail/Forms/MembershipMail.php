@@ -30,7 +30,7 @@ class MembershipMail extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->to(config('mail.to.address'))
+        return $this->to(config('mail.tox.address'))
             ->subject('Anfrage via Mitgliedschaftsformular')
             ->markdown('emails.forms.membership');
     }
