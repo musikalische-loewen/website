@@ -21,6 +21,7 @@ class TicketMail extends Mailable implements ShouldQueue
     public function __construct(array $data)
     {
         $this->data = $data;
+        $this->data['id'] = rand(1000, 9999);
     }
 
     /**
@@ -34,7 +35,7 @@ class TicketMail extends Mailable implements ShouldQueue
             ->cc('vorsitzender2@musikalische-loewen.de')
             ->bcc('kassierer@musikalische-loewen.de')
             ->bcc('admin@musikalische-loewen.de')
-            ->subject('Kartenvorverkauf')
+            ->subject(sprintf('Kartenbestellung #%s', $this->data['id']))
             ->markdown('emails.forms.tickets')
             ->attach(public_path('docs/postkarte_pfingstkonzert_2022.pdf'));
     }
