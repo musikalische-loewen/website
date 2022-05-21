@@ -39,6 +39,15 @@
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="card shadow-sm bg-primary text-white">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Karten für unser <a href="{{ asset('docs/postkarte_pfingstkonzert_2022.pdf') }}">Pfingstkonzert</a> gibt es <a href="{{ url('karten') }}">hier</a>!
+                        </p>
+                    </div>
+                </div>
+            </div>
             @foreach(\App\Models\Post::take(5)->get() as $post)
                 <div class="col">
                     <div class="card shadow-sm">

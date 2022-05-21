@@ -218,3 +218,13 @@ footer {
         opacity: 0;
     }
 }
+
+/* Flashing content (for highlighting nav items) */
+.flashing {
+    animation: blinker 4s linear infinite;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0.25;
+    }
+}
