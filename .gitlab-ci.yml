@@ -60,6 +60,8 @@ phpunit:
   dependencies:
     - composer
     - npm
+  variables:
+    XDEBUG_MODE: coverage
   before_script:
     - apk add chromium-chromedriver
     - apk add chromium
