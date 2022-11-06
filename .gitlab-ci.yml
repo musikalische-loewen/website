@@ -1,4 +1,4 @@
-image: lorisleiva/laravel-docker:7.4
+image: lorisleiva/laravel-docker:8.1
 
 .init_ssh: &init_ssh |
   eval $(ssh-agent -s)
@@ -7,10 +7,6 @@ image: lorisleiva/laravel-docker:7.4
   chmod 700 ~/.ssh
   ssh-keyscan -H "$DEPLOYMENT_HOST" >> ~/.ssh/known_hosts
   chmod 644 ~/.ssh/known_hosts
-
-.change_file_permissions: &change_file_permissions |
-  find . -type f -not -path "./vendor/*" -exec chmod 664 {} \;
-  find . -type d -not -path "./vendor/*" -exec chmod 775 {} \;
 
 include:
   - template: Dependency-Scanning.gitlab-ci.yml
@@ -71,8 +67,13 @@ phpunit:
     - chromedriver 2>&1 &
     - sleep 5
     - nohup php artisan serve &
-    - phpunit --coverage-text --colors=never --stderr
+    - phpunit --coverage-text --colors=never --coverage-cobertura=coverage.cobertura.xml
+  coverage: '/^\s*Lines:\s*\d+.\d+\%/'
   artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.cobertura.xml
     paths:
       - storage/logs
       - tests/Browser/screenshots
@@ -119,11 +120,6 @@ deployer:
     - npm
   script:
     - *init_ssh
-    - *change_file_permissions
-    - echo "DEPLOYER_DEFAULT_HOST=$DEPLOYMENT_HOST" >> .env
-    - php artisan deploy -s upload
-  environment:
-    name: production
-    url: http://musikalische-loewen.de
+    - vendor/bin/dep deploy
   only:
     - master
