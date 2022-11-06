@@ -7,7 +7,7 @@ use Tests\DuskTestCase;
 
 class FormTest extends DuskTestCase
 {
-    public function testContactForm()
+    public function test_contact_form()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/kontakt')
@@ -20,7 +20,7 @@ class FormTest extends DuskTestCase
         });
     }
 
-    public function testMembershipForm()
+    public function test_membership_form()
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/verein/mitgliedschaft')

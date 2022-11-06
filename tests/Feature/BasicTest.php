@@ -6,7 +6,7 @@ use Tests\TestCase;
 
 class BasicTest extends TestCase
 {
-    public function testStaticPagesAvailability()
+    public function test_static_pages_availability()
     {
         $this->get('/')->assertStatus(200);
         $this->get('/orchester/haupt')->assertStatus(200);
@@ -24,7 +24,7 @@ class BasicTest extends TestCase
         $this->get('/impressum')->assertStatus(200);
     }
 
-    public function testStaticPagesValidity()
+    public function test_static_pages_validity()
     {
         $this->assertValidHtml($this->get('/')->getContent());
         $this->assertValidHtml($this->get('/orchester/haupt')->getContent());

@@ -23,44 +23,32 @@
         }
     ],
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^8.0.2",
         "ext-curl": "*",
-        "fideloper/proxy": "^4.4",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "intervention/validation": "^2.6",
-        "laravel/framework": "^8.12",
-        "laravel/tinker": "^2.5",
+        "guzzlehttp/guzzle": "^7.2",
+        "intervention/validation": "^3.2",
+        "laravel/framework": "^9.19",
+        "laravel/sanctum": "^3.0",
+        "laravel/tinker": "^2.7",
         "lukasmu/laravel-rickroll": "^1.0.2",
         "mxl/laravel-job": "^1.3",
         "pgrimaud/instagram-user-feed": "^6.6",
-        "spatie/laravel-honeypot": "^3.0"
+        "spatie/laravel-honeypot": "^4.0"
     },
     "require-dev": {
         "ext-dom": "*",
         "ext-libxml": "*",
-        "facade/ignition": "^2.5",
+        "deployer/deployer": "^7.0",
         "fakerphp/faker": "^1.9.1",
-        "laravel/dusk": "^6.11",
+        "laravel/dusk": "^7.1",
+        "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",
         "laravel/telescope": "^4.4",
-        "lorisleiva/laravel-deployer": "^0.3.5",
-        "mockery/mockery": "^1.4.2",
-        "nunomaduro/collision": "^5.0",
-        "phpunit/phpunit": "^9.3.3",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^6.1",
+        "phpunit/phpunit": "^9.5.10",
+        "spatie/laravel-ignition": "^1.0",
         "squizlabs/php_codesniffer": "^3.5"
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": [
-                "laravel/telescope"
-            ]
-        }
     },
     "autoload": {
         "psr-4": {
@@ -77,8 +65,6 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
@@ -93,9 +79,27 @@
             "@php artisan storage:link"
         ],
         "post-update-cmd": [
-            "@php artisan telescope:publish --ansi"
+            "@php artisan telescope:publish --ansi",
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "style-test": "vendor/bin/phpcs",
         "style-fix": "vendor/bin/phpcbf"
-    }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "laravel/telescope"
+            ]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

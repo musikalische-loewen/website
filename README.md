@@ -20,7 +20,7 @@ In the following some instructions for installing the 🦁 website in a local de
 It is assumed that you are using Windows 10 as operating system. In case that you are using Linux or Mac you need to do things slightly different, but usually the process is even more straightforward.
 
 1. Make sure to install a GIT client (e.g. [the native one](https://git-scm.com/downloads)) and an IDE of your choice (e.g. [PHPStorm](https://www.jetbrains.com/phpstorm/)).
-2. Then install Visual C++ Redistributable for Visual Studio, PHP and Composer as explained on [https://devanswers.co/install-composer-php-windows-10/](https://devanswers.co/install-composer-php-windows-10/]). Please do not yet install PHP 8 but PHP 7 for the time being.
+2. Then install Visual C++ Redistributable for Visual Studio, PHP and Composer as explained on [https://devanswers.co/install-composer-php-windows-10/](https://devanswers.co/install-composer-php-windows-10/]). Make sure to install PHP 8.
 3. Go to the directory where you installed PHP, search for the php.ini file and enable the extensions pdo_sqlitee, sqlite3 and fileinfo by removing the semicolon before the lines extension=pdo_sqlite, extension=sqlite3 and extension=fileinfo. Save the php.ini file.
 4. Then clone this repository to your computer. Simply run ```git clone https://gitlab.com/lukasmu/loewen.git``` in the directory of your choice. Afterwards switch to the cloned directory by typing ```cd loewen```.
 5. Run  ```composer create-project``` to finalize the installation of the 🦁 website. This might take a minute or two.
