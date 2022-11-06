@@ -69,6 +69,7 @@ phpunit:
     - chromedriver 2>&1 &
     - sleep 5
     - nohup php artisan serve &
+    - php artisan dusk:chrome-driver
     - phpunit --coverage-text --colors=never --coverage-cobertura=coverage.cobertura.xml
   coverage: '/^\s*Lines:\s*\d+.\d+\%/'
   artifacts:
