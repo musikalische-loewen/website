@@ -82,8 +82,7 @@
         ],
         "post-update-cmd": [
             "@php artisan telescope:publish --ansi",
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-            "@php artisan dusk:chrome-driver"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
         "style-test": "vendor/bin/phpcs",
         "style-fix": "vendor/bin/phpcbf"
