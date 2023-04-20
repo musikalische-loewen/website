@@ -26,13 +26,6 @@
 
 @section('main')
     <div class="container py-4" id="news">
-        <div class="row">
-            <div class="col col-md-6 mb-4 mx-auto" style="margin-left: auto; margin-right: auto;">
-                <div class="youtube-container" style="position: relative;padding-bottom: 56.25%;height: 0;">
-                    <iframe style="position:absolute; top:0; left:0; width:100%; height: 100%;" src="https://www.youtube.com/embed/hO-ImZnMvog"  loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
-                </div>
-            </div>
-        </div>
         <div class="row row-cols-1 row-cols-md-3 g-4" id="lightgallery">
             <div class="col">
                 <div class="card shadow-sm bg-primary text-white">
