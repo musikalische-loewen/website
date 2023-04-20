@@ -22,8 +22,8 @@ class Post extends Model
      *
      * @var array
      */
-    protected $dates = [
-        'date',
+    protected $casts = [
+        'date' => 'datetime',
     ];
 
     protected static function boot()
