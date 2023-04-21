@@ -15,7 +15,7 @@
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
                         <p class="card-text">
-                            Dirigent: zurzeit vakant<br>
+                            Dirigent: Wolfgang Lang<br>
                             Probe: Jeden Freitag von 16:30 Uhr bis 17:30 Uhr
                         </p>
                     </div>

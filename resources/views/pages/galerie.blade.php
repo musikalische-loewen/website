@@ -40,7 +40,8 @@
                     '2019_oktoberfest_montabaur' => 'Auftritt auf dem Oktoberfest 2019 in Montabaur',
                     '2019_volkstrauertag' => 'Volkstrauertag 2019',
                     '2019_weihnachtsmarkt' => 'Weihnachtsmarkt 2019 in Limburg',
-                    '2020_karneval' => 'Veilchendienstagsumzug 2020 in Heimbach-Weis'
+                    '2020_karneval' => 'Veilchendienstagsumzug 2020 in Heimbach-Weis',
+                    '2022_konzert_zu_neuen_horizonten' => 'Konzert 2022: Zu neuen Horizonten'
                 ];
             @endphp
             @foreach(array_reverse($images) as $image)
