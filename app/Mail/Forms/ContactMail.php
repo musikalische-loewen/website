@@ -15,8 +15,6 @@ class ContactMail extends Mailable implements ShouldQueue
 
     /**
      * Create a new message instance.
-     *
-     * @param array $data
      */
     public function __construct(array $data)
     {
@@ -25,10 +23,8 @@ class ContactMail extends Mailable implements ShouldQueue
 
     /**
      * Build the message.
-     *
-     * @return $this
      */
-    public function build()
+    public function build(): Mailable
     {
         return $this->to(config('mail.tox.address'))
             ->subject('Anfrage via Kontaktformular')

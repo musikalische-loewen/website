@@ -9,11 +9,8 @@ class PostObserver
 {
     /**
      * Handle the post "saving" event.
-     *
-     * @param  \App\Models\Post  $post
-     * @return void
      */
-    public function saving(Post $post)
+    public function saving(Post $post): void
     {
         if ($post->isDirty('thumbnailSrc')) {
             Storage::put('public/'.$post->path_thumbnail, url_get_contents($post->thumbnailSrc));

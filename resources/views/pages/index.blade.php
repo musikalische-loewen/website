@@ -39,7 +39,16 @@
                     </div>
                 </div>
             </div>
-            @foreach(\App\Models\Post::take(5)->get() as $post)
+            <div class="col">
+                <div class="card shadow-sm bg-primary text-white">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Karten für unser <a href="{{ asset('docs/postkarte_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> gibt es <a href="{{ url('tickets') }}">hier</a>!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        @foreach(\App\Models\Post::take(5)->get() as $post)
                 <div class="col">
                     <div class="card shadow-sm">
                         <a href="{{ asset('storage/'.$post->path_display) }}" class="card-img-wrap">
