@@ -5,7 +5,7 @@
 @section('abstract')
     Hier können Sie Karten für unser <a class="text-white" href="{{ asset('docs/postkarte_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> am 28. Mai 2023 bestellen.<br><br>
     Kinder bis zum 14. Lebensjahr haben freien Eintritt, Jugendliche vom 15. bis 17. Lebensjahr zahlen einen ermäßigten Eintrittspreis von 6€, und Erwachsene zahlen einen Eintrittspreis von 11€.<br>
-    Nach dem Klick auf "Karten bestellen" werden Sie zu unserem Zahlungsdienstleister weitergeleitet. Die bestellten Karten werden für Sie an der Kasse hinterlegt.<br><br>
+    Nach dem Klick auf "Karten bestellen" werden Sie zu unserem Zahlungsdienstleister weitergeleitet. Nach erfolgter Zahlung erhalten Sie einen Bestätigungsmail von uns. Die bestellten Karten werden für Sie an der Abendkasse hinterlegt und können gegen Vorlage der Bestätigungsmail abgeholt werden.<br><br>
     Wir freuen uns auf Ihren Besuch!
 @endsection
 
