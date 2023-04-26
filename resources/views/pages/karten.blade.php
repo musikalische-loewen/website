@@ -3,7 +3,7 @@
 @section('title', 'Kartenvorverkauf')
 @section('image', asset('images/archive/large/rich-smith-685e1B55wr0-unsplash.jpg'))
 @section('abstract')
-    Hier können Sie Karten für unser <a class="text-white" href="{{ asset('docs/postkarte_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> am 28. Mai 2023 bestellen.<br><br>
+    Hier können Sie Karten für unser <a class="text-white" href="{{ asset('docs/plakat_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> am 28. Mai 2023 bestellen.<br><br>
     Kinder bis zum 14. Lebensjahr haben freien Eintritt, Jugendliche vom 15. bis 17. Lebensjahr zahlen einen ermäßigten Eintrittspreis von 6€, und Erwachsene zahlen einen Eintrittspreis von 11€.<br>
     Nach dem Klick auf "Karten bestellen" werden Sie zu unserem Zahlungsdienstleister weitergeleitet. Nach erfolgter Zahlung erhalten Sie einen Bestätigungsmail von uns. Die bestellten Karten werden für Sie an der Abendkasse hinterlegt und können gegen Vorlage der Bestätigungsmail abgeholt werden.<br><br>
     Wir freuen uns auf Ihren Besuch!
@@ -37,7 +37,7 @@
 
 @section('main')
     <div class="container mt-3 mb-5">
-        <div class="row">
+        <div class="row mb-5">
             <div class="col-md-8 col-lg-8">
                 @if(session('success'))
                     <div class="card shadow-sm bg-success text-white mt-0 mb-4 py-0">
@@ -96,6 +96,20 @@
                             <button type="submit" class="btn btn-primary btn-round btn-block">Karten bestellen</button>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-md-8 col-lg-8">
+                <div class="card shadow-sm mt-0 mb-4 py-0">
+                    <div class="card-body">
+                        <p class="mb-0">Dieses Projekt wird im Rahmen des bundesweiten Programms IMPULS gefördert.</p>
+                        <a href="https://impuls.bundesmusikverband.de"><img src="{{ asset('images/logos/BMCO_Impuls_Logo_RGB.png') }}" alt="Impuls" style="height:80px"/></a>
+                        <a href="https://bundesmusikverband.de"><img src="{{ asset('images/logos/BMCO_Logo_RGB.svg') }}" alt="BMCO" style="height:80px"/></a>
+                        <a href="https://kulturstaatsministerin.de"><img src="{{ asset('images/logos/BKM_2017_Web2x_de.gif') }}" alt="BKM" style="height:80px"/></a>
+                        <a href="https://www.bundesregierung.de/breg-de/bundesregierung/staatsministerin-fuer-kul-
+        tur-und-medien/neustart-kultur-startet-1841780"><img src="{{ asset('images/logos/Neustart Kultur_CMYK_transparent.png') }}" alt="Neustart Kultur" style="height:80px"/></a>
+                    </div>
                 </div>
             </div>
         </div>
