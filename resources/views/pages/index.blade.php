@@ -39,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            {{--<div class="col">
+            <div class="col">
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
                         <p class="card-text">
@@ -47,7 +47,7 @@
                         </p>
                     </div>
                 </div>
-            </div>--}}
+            </div>
         @foreach(\App\Models\Post::take(5)->get() as $post)
                 <div class="col">
                     <div class="card shadow-sm">
