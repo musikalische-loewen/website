@@ -43,7 +43,7 @@
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
                         <p class="card-text">
-                            Karten für unser <a href="{{ asset('docs/postkarte_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> gibt es <a href="{{ url('tickets') }}">hier</a>!
+                            Karten für unser <a href="{{ asset('docs/plakat_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> gibt es <a href="{{ url('karten') }}">hier</a>!
                         </p>
                     </div>
                 </div>
