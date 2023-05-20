@@ -15,7 +15,7 @@ Kinder (0€, bis 14 Jahre): {{ $ticket->data['number_free'] }}
 
 Die Karten können an der Abendkasse gegen Vorlage dieser Mail abgeholt werden. Es ist jedoch nicht notwendig diese Mail auszudrucken, das Vorzeigen auf einem Smartphone o.ä. ist ausreichend.
 
-{{-- Im Anhang dieser Mail finden Sie noch eine Postkarte mit weiteren Informationen zum Konzert. --}}
+Im Anhang dieser Mail finden Sie noch eine Postkarte mit weiteren Informationen zum Konzert.
 
 Wir freuen uns auf Ihren Besuch!
 

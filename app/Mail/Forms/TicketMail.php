@@ -31,6 +31,6 @@ class TicketMail extends Mailable implements ShouldQueue
             ->bcc('admin@musikalische-loewen.de')
             ->subject(sprintf('Kartenbestellung #%s', $this->ticket->number))
             ->markdown('emails.forms.ticket')
-            ->attach(public_path('docs/plakat_pfingstkonzert_2023.pdf')); # TODO: Postkarte?!
+            ->attach(public_path('docs/postkarte_pfingstkonzert_2023.pdf'));
     }
 }
