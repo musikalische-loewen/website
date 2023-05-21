@@ -15,8 +15,11 @@
                         <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
                     </div>
                     <div class="col col-md-6 text-center my-auto">
-                        <a href="{{ url('karten') }}">
+                        <a title="Pfingstkonzert 2023" href="{{ url('karten') }}">
                             <img src="{{ asset('images/archive/large/2023_konzert_klang_der_alpen_plakat.jpg') }}" alt="Pfingstkonzert 2023" class="mt-3 mb-3" style="height: 70vh;" />
+                        </a>
+                        <a title="Konzertreise 2023" href="{{ url('konzertreise') }}">
+                            <img src="{{ asset('images/other/dirmstein_ortsschild.png') }}" alt="Konzertreise nach Dirmstein" class="mt-3 mb-3" style="height: 20vh; transform: rotate(10deg);" />
                         </a>
                     </div>
                 </div>
@@ -53,7 +56,10 @@
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
                         <p class="card-text">
-                            Karten für unser <a  target="_blank" href="{{ asset('docs/postkarte_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> gibt es <a href="{{ url('karten') }}">hier</a>!
+                            Karten für unser <a target="_blank" href="{{ asset('docs/postkarte_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> gibt es <a href="{{ url('karten') }}">hier</a>!
+                        </p>
+                        <p class="card-text">
+                            Weitere Infos zu unserer Konzertreise nach Dirmstein finden Sie <a href="{{ url('konzertreise') }}">hier</a>.
                         </p>
                     </div>
                 </div>
