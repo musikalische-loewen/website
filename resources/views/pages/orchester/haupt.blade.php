@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="card shadow-sm mt-3">
-                    <a href="{{ asset('images/archive/medium/lukas.jpg') }}" class="card-img-wrap" data-sub-html="Dirigent Lukas Oberbauer">
+                    <a href="{{ asset('images/archive/large/lukas.jpg') }}" class="card-img-wrap" data-sub-html="Dirigent Lukas Oberbauer">
                         <img src="{{ asset('images/archive/medium/lukas.jpg') }}" class="card-img-top" alt="Dirigent Lukas Oberbauer">
                     </a>
                 </div>

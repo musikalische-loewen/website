@@ -2,9 +2,6 @@
 
 @section('title', 'Vorstand')
 @section('image', asset('images/archive/large/samuel-ramos-Md8c-amE5ms-unsplash.jpg'))
-@section('abstract')
-
-@endsection
 
 @section('main')
     <div class="container my-5">
