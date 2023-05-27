@@ -15,7 +15,7 @@
                         <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
                     </div>
                     <div class="col col-md-6 text-center my-auto">
-                        <a title="Pfingstkonzert 2023" href="{{ url('karten') }}">
+                        <a title="Pfingstkonzert 2023" href="#news">
                             <img src="{{ asset('images/archive/large/2023_konzert_klang_der_alpen_plakat.jpg') }}" alt="Pfingstkonzert 2023" class="mt-3 mb-3" style="height: 70vh;" />
                         </a>
                         <a title="Konzertreise 2023" href="{{ url('konzertreise') }}">
@@ -39,6 +39,17 @@
 
 @section('main')
     <div class="container py-4" id="news">
+        <div class="row mb-4">
+            <div class="col">
+                <div class="card shadow-sm bg-primary text-white">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <i class="fas fa-exclamation-circle"></i> Der Kartenvorverkauf für unser <a target="_blank" href="{{ asset('docs/postkarte_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> ist beendet. An der Abendkasse können noch wenige Restkarten erworben werden.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row row-cols-1 row-cols-md-3 g-4" id="lightgallery">
             <div class="col">
                 <div class="card shadow-sm bg-primary text-white">
@@ -56,15 +67,12 @@
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
                         <p class="card-text">
-                            Karten für unser <a target="_blank" href="{{ asset('docs/postkarte_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> gibt es <a href="{{ url('karten') }}">hier</a>!
-                        </p>
-                        <p class="card-text">
-                            Weitere Infos zu unserer Konzertreise nach Dirmstein finden Sie <a href="{{ url('konzertreise') }}">hier</a>.
+                            Informationen zu unserer Konzertreise nach Dirmstein finden Sie <a href="{{ url('konzertreise') }}">hier</a>.
                         </p>
                     </div>
                 </div>
             </div>
-        @foreach(\App\Models\Post::take(5)->get() as $post)
+            @foreach(\App\Models\Post::take(5)->get() as $post)
                 <div class="col">
                     <div class="card shadow-sm">
                         <a href="{{ asset('storage/'.$post->path_display) }}" class="card-img-wrap">
