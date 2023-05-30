@@ -15,8 +15,8 @@
                         <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
                     </div>
                     <div class="col col-md-6 text-center my-auto">
-                        <a title="Pfingstkonzert 2023" href="#news">
-                            <img src="{{ asset('images/archive/large/2023_konzert_klang_der_alpen_plakat.jpg') }}" alt="Pfingstkonzert 2023" class="mt-3 mb-3" style="height: 70vh;" />
+                        <a title="Konzert Dirmstein" href="{{ url('konzertreise') }}">
+                            <img src="{{ asset('images/other/dirmstein_plakat.png') }}" alt="Konzert Dirmstein" class="mt-3 mb-3" style="height: 70vh;" />
                         </a>
                         <a title="Konzertreise 2023" href="{{ url('konzertreise') }}">
                             <img src="{{ asset('images/other/dirmstein_ortsschild.png') }}" alt="Konzertreise nach Dirmstein" class="mt-3 mb-3" style="height: 20vh; transform: rotate(10deg);" />
@@ -39,17 +39,6 @@
 
 @section('main')
     <div class="container py-4" id="news">
-        <div class="row mb-4">
-            <div class="col">
-                <div class="card shadow-sm bg-primary text-white">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <i class="fas fa-exclamation-circle"></i> Der Kartenvorverkauf für unser <a target="_blank" href="{{ asset('docs/postkarte_pfingstkonzert_2023.pdf') }}">Pfingstkonzert</a> ist beendet. An der Abendkasse können noch wenige Restkarten erworben werden.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row row-cols-1 row-cols-md-3 g-4" id="lightgallery">
             <div class="col">
                 <div class="card shadow-sm bg-primary text-white">
