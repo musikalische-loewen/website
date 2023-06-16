@@ -10,20 +10,11 @@
         <div class="background-text container d-flex flex-column align-items-center" style="height: 100vh;">
             <div class="my-auto text-center">
                 <div class="row">
-                    <div class="col col-md-6 text-center my-auto">
+                    <div class="col text-center my-auto">
                         <h1>Willkommen...</h1>
                         <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
                     </div>
-                    <div class="col col-md-6 text-center my-auto">
-                        <a title="Konzert Dirmstein" href="{{ url('konzertreise') }}">
-                            <img src="{{ asset('images/other/dirmstein_plakat.png') }}" alt="Konzert Dirmstein" class="mt-3 mb-3" style="height: 70vh;" />
-                        </a>
-                        <a title="Konzertreise 2023" href="{{ url('konzertreise') }}">
-                            <img src="{{ asset('images/other/dirmstein_ortsschild.png') }}" alt="Konzertreise nach Dirmstein" class="mt-3 mb-3" style="height: 20vh; transform: rotate(10deg);" />
-                        </a>
-                    </div>
                 </div>
-
             </div>
             <div class="scroll pb-5">
                 <a class="text-white" href="#news">
@@ -48,15 +39,6 @@
                         </p>
                         <p class="card-text">
                             Nachfolgend finden Sie ein paar Neuigkeiten aus dem Vereinsleben. Noch mehr Neuigkeiten gibt es auf <a target="_blank" rel="noreferrer" href="https://www.instagram.com/musikalische.loewen/" >Instagram</a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm bg-primary text-white">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Informationen zu unserer Konzertreise nach Dirmstein finden Sie <a href="{{ url('konzertreise') }}">hier</a>.
                         </p>
                     </div>
                 </div>
