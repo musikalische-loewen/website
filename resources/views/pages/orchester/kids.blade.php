@@ -1,10 +1,10 @@
 @extends('layout.main')
 
-@section('title', 'Kidsorchester')
+@section('title', 'Bläserklasse')
 @section('image', asset('images/archive/large/kidsorchester.jpg'))
 @section('abstract')
-    Das Kidsorchester bildet nach bzw. während der Ausbildung die erste Stufe des Musikvereins.
-    Nach etwa einem Jahr Einzelunterricht werden die Schüler ins Kidsorchester aufgenommen und erlenen leichte Stücke im Zusammenspiel mit anderen Kindern.
+    Die Bläserklasse bildet nach bzw. während der Ausbildung die erste Stufe des Musikvereins.
+    Nach etwa einem Jahr Einzelunterricht werden die Schüler in die Bläserklasse aufgenommen und erlenen leichte Stücke im Zusammenspiel mit anderen Kindern.
     Erste Auftritte finden im Rahmen unseres Jahreskonzertes an Pfingsten sowie beispielsweise an Altennachmittagen oder den Martinszügen statt.
 @endsection
 
@@ -24,7 +24,7 @@
             <div class="col-md-8 mb-4">
                 <div class="card shadow-sm">
                     <a href="{{ asset('images/archive/large/kidsorchester.jpg') }}" class="card-img-wrap">
-                        <img src="{{ asset('images/archive/medium/kidsorchester.jpg') }}" class="card-img-top" alt="Kidsorchester">
+                        <img src="{{ asset('images/archive/medium/kidsorchester.jpg') }}" class="card-img-top" alt="Bläserklasse">
                     </a>
                 </div>
             </div>
