@@ -21,7 +21,7 @@
                             Jugendorchester
                         </a></li>
                     <li><a class="dropdown-item" href="{{ url('orchester/kids') }}">
-                            Kidsorchester
+                            Bläserklasse
                         </a></li>
                 </ul>
             </li>
