@@ -16,7 +16,6 @@ class TicketRequest extends FormRequest
             'name' => ['required', 'string', 'max:50'],
             'email' => ['required', 'email'],
             'number_full' => ['required', 'integer', 'min:0'],
-            'number_reduced' => ['required', 'integer', 'min:0'],
             'number_free' => ['required', 'integer', 'min:0'],
         ];
     }
@@ -31,7 +30,7 @@ class TicketRequest extends FormRequest
                 if ($this->number_full == 0 && $this->number_reduced == 0) {
                     $validator->errors()->add(
                         'number_free',
-                        'Bitte wählen Sie mindestens ein Ticket für Erwachsene oder Jugendliche aus.
+                        'Bitte wählen Sie mindestens ein Ticket für Erwachsene/Jugendliche aus.
                         Es ist nicht notwendig Tickets (nur) für Kinder zu bestellen.'
                     );
                 }

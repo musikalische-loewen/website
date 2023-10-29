@@ -48,21 +48,14 @@ class TicketController extends Controller
         $line_items = [];
         if ($request->number_full) {
             $line_items[] = self::getLineItem(
-                'Ticket Konzert 2023 (regulär, ab 18. Lebensjahr)',
-                1100,
+                'Ticket Adventskonzert 2023 (regulär, ab 15. Lebensjahr)',
+                1000,
                 $request->number_full
-            );
-        }
-        if ($request->number_reduced) {
-            $line_items[] = self::getLineItem(
-                'Ticket Konzert 2023 (ermäßigt, 15. bis 17. Lebensjahr)',
-                600,
-                $request->number_reduced
             );
         }
         if ($request->number_free) {
             $line_items[] = self::getLineItem(
-                'Ticket Konzert 2023 (kostenlos, bis 14. Lebensjahr)',
+                'Ticket Adventskonzert 2023 (kostenlos, bis 14. Lebensjahr)',
                 0,
                 $request->number_free
             );
@@ -76,12 +69,11 @@ class TicketController extends Controller
             'locale' => 'de'
         ]);
         Ticket::create([
-            'event' => 'pfingstkonzert_2023',
+            'event' => 'adventskonzert_2023',
             'email' => $request->email,
             'data' => [
                 'name' => $request->name,
                 'number_full' => $request->number_full,
-                'number_reduced' => $request->number_reduced,
                 'number_free' => $request->number_free
             ],
             'stripe_checkout_session_id' => $checkout_session->id

@@ -26,6 +26,6 @@ class Ticket extends Model
 
     public function getNumberAttribute(): string
     {
-        return '2023-'.sprintf('%04d', $this->id);
+        return date('Y').'-'.sprintf('%04d', $this->id);
     }
 }
