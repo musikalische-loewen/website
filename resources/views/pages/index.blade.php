@@ -6,7 +6,7 @@
 
 @section('header')
     <header class="background-wrapper background-filter-light" style="min-height: 125vh;">
-        <div class="background-image" style="background-image: url({{ asset('images/archive/large/header.jpg') }});"></div>
+        <div class="background-image" style="background-image: url({{ asset('images/archive/large/2023_konzert_klang_der_alpen_gruppenfoto.jpg') }});"></div>
         <div class="background-text container d-flex flex-column align-items-center" style="height: 100vh;">
             <div class="my-auto text-center">
                 <div class="row">

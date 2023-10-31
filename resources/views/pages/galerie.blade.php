@@ -41,7 +41,10 @@
                     '2019_volkstrauertag' => 'Volkstrauertag 2019',
                     '2019_weihnachtsmarkt' => 'Weihnachtsmarkt 2019 in Limburg',
                     '2020_karneval' => 'Veilchendienstagsumzug 2020 in Heimbach-Weis',
-                    '2022_konzert_zu_neuen_horizonten' => 'Konzert 2022: Zu neuen Horizonten'
+                    '2022_konzert_zu_neuen_horizonten' => 'Konzert 2022: Zu neuen Horizonten',
+                    '2023_konzert_klang_der_alpen_gruppenfoto' => 'Konzert 2023: Klang der Alpen',
+                    '2023_konzert_klang_der_alpen_plakat' => 'Konzert 2023: Klang der Alpen',
+                    '2023_adventskonzert' => 'Adventskonzert 2023'
                 ];
             @endphp
             @foreach(array_reverse($images) as $image)
