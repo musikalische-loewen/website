@@ -34,6 +34,7 @@
         "mxl/laravel-job": "^1.3",
         "nesbot/carbon": "^2.66",
         "pgrimaud/instagram-user-feed": "^6.6",
+        "phpoffice/phpspreadsheet": "^1.29",
         "spatie/laravel-honeypot": "^4.0",
         "spatie/laravel-stripe-webhooks": "^3.2",
         "stripe/stripe-php": "^10.12"

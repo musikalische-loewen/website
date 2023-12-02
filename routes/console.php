@@ -22,3 +22,8 @@ Artisan::command('posts:sync', function () {
     \App\Jobs\PostSync::dispatch();
     $this->info('Job for syncing posts dispatched!');
 })->purpose('Sync posts from Instagram');
+
+Artisan::command('tickets:overview {event}', function (string $event) {
+    \App\Jobs\TicketOverview::dispatchSync($event);
+    $this->info('Job for generating ticket overview dispatched!');
+})->purpose('Generate an overview of the tickets sold for an event');

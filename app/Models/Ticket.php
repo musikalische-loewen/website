@@ -26,6 +26,7 @@ class Ticket extends Model
 
     public function getNumberAttribute(): string
     {
+        # TODO: Use creation year?
         return date('Y').'-'.sprintf('%04d', $this->id);
     }
 }
