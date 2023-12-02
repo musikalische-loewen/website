@@ -4,7 +4,6 @@ namespace App\Jobs;
 
 use App\Models\Ticket;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
@@ -31,15 +30,17 @@ class TicketOverview implements ShouldQueue
      */
     public function handle(): void
     {
-        $tickets = Ticket::where('event', $this->event)->whereNotNull('paid_at')->get()->map(function (Ticket $ticket, int $key) {
-            return [
-                $ticket->number,
-                $ticket->data['name'],
-                $ticket->email,
-                $ticket->data['number_full'],
-                $ticket->data['number_reduced']
-            ];
-        })->toArray();
+        $tickets = Ticket::where('event', $this->event)->whereNotNull('paid_at')->get()->map(
+            function (Ticket $ticket, int $key) {
+                return [
+                    $ticket->number,
+                    $ticket->data['name'],
+                    $ticket->email,
+                    $ticket->data['number_full'],
+                    $ticket->data['number_reduced']
+                ];
+            }
+        )->toArray();
         $spreadsheet = new Spreadsheet();
         $active = $spreadsheet->getActiveSheet();
         $active->setCellValue('A1', 'Ticketvorverkauf (online)');
@@ -53,7 +54,7 @@ class TicketOverview implements ShouldQueue
         $active->setCellValue('D5', 'Normalpreis');
         $active->setCellValue('E5', 'Kostenlos');
         $active->getStyle('5:5')->getFont()->setBold(true);
-        $active->fromArray($tickets,NULL,'A6');
+        $active->fromArray($tickets, null, 'A6');
         foreach ($active->getColumnIterator() as $column) {
             $active->getColumnDimension($column->getColumnIndex())->setAutoSize(true);
         }
