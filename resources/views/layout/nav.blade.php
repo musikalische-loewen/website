@@ -61,12 +61,6 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ url('karten') }}" class="nav-link">
-                    <i class="fas fa-ticket-alt"></i>
-                    Kartenvorverkauf
-                </a>
-            </li>
-            <li class="nav-item">
                 <a href="{{ url('intern') }}" class="nav-link ">
                     <i class="fa fa-lock"></i>
                     Intern

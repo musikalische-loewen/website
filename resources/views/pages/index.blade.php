@@ -15,7 +15,7 @@
                         <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
                     </div>
                     <div class="col col-md-6 text-center my-auto">
-                        <a title="Adventskonzert" href="{{ url('karten') }}">
+                        <a title="Adventskonzert" href="#news">
                             <img src="{{ asset('images/archive/large/2023_adventskonzert.jpg') }}" alt="Adventskonzert" class="mt-3 mb-3" style="height: 70vh;" />
                         </a>
                     </div>
@@ -53,7 +53,7 @@
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
                         <p class="card-text">
-                            Karten für unser <a target="_blank" href="{{ asset('images/archive/large/2023_adventskonzert.jpg') }}">Adventskonzert</a> gibt es <a href="{{ url('karten') }}">hier</a>!
+                            Der Kartenvorverkauf für unser <a target="_blank" href="{{ asset('images/archive/large/2023_adventskonzert.jpg') }}">Adventskonzert</a> ist beendet. An der Abendkasse können noch Restkarten erworben werden.
                         </p>
                     </div>
                 </div>
