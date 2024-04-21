@@ -13,5 +13,6 @@ class ExampleTest extends DuskTestCase
             $browser->visit('/')
                     ->assertSee('Willkommen...');
         });
+        session()->flush();
     }
 }

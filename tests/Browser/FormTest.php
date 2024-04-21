@@ -18,6 +18,7 @@ class FormTest extends DuskTestCase
                     ->press('Nachricht absenden')
                     ->assertSee('Ihre Anfrage wurde erfolgreich übermittelt.');
         });
+        session()->flush();
     }
 
     public function test_membership_form()
@@ -46,5 +47,6 @@ class FormTest extends DuskTestCase
                 ->press('Mitgliedschaftsformular absenden')
                 ->assertSee('Ihre Anfrage wurde erfolgreich übermittelt.');
         });
+        session()->flush();
     }
 }
