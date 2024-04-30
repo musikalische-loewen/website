@@ -42,6 +42,7 @@ class PostSync implements ShouldQueue
             $imap_client
         );
         $profile = $api->getProfile(config('services.instagram.profile'));
+        $profile = $api->getMoreMedias($profile); // TODO: This seems to be required. Not sure why...
         $medias = collect($profile->getMedias())->filter(function ($value) {
             return $value->isVideo() == false;
         })->take(5);
