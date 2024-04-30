@@ -46,6 +46,10 @@ class PostSync implements ShouldQueue
             return $value->isVideo() == false;
         })->take(5);
 
+        if ($medias->count()<1) {
+            return;
+        }
+
         // Insert or update posts
         $attributes = [
             'shortcode',
