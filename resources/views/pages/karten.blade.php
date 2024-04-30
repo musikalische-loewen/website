@@ -5,6 +5,7 @@
 @section('abstract')
     Hier können Sie Karten für unser <a class="text-white" target="_blank" href="{{ asset('images/archive/large/2024_konzert_sonne_plakat.jpg') }}">Pfingstkonzert</a> am 19. Mai 2024 bestellen.<br><br>
     Kinder bis zum 14. Lebensjahr haben freien Eintritt, Jugendliche vom 15. bis 17. Lebensjahr zahlen einen ermäßigten Eintrittspreis von 6€, und Erwachsene zahlen einen Eintrittspreis von 11€.<br>
+    Bitte beachten Sie, dass auch für Kinder eine Karte bestellt werden muss, da die Anzahl der Sitzplätze begrenzt ist.<br><br>
     Nach dem Klick auf „Karten bestellen“ werden Sie zu unserem Zahlungsdienstleister weitergeleitet. Nach erfolgter Zahlung erhalten Sie einen Bestätigungsmail von uns. Die bestellten Karten werden für Sie an der Abendkasse hinterlegt und können gegen Vorlage der Bestätigungsmail abgeholt werden.<br><br>
     Wir freuen uns auf Ihren Besuch!
 @endsection
