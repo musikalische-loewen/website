@@ -16,7 +16,7 @@
                     </div>
                     <div class="col col-md-6 text-center my-auto">
                         <a title="Pfingstkonzert 2024" href="{{ url('karten') }}">
-                            <img src="{{ asset('images/archive/large/2024_konzert_sonne_save_the_date.jpg') }}" alt="Pfingstkonzert 2024" class="mt-3 mb-3" style="height: 70vh;" />
+                            <img src="{{ asset('images/archive/large/2024_konzert_sonne_plakat.jpg') }}" alt="Pfingstkonzert 2024" class="mt-3 mb-3" style="height: 70vh;" />
                         </a>
                     </div>
                 </div>
