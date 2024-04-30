@@ -28,7 +28,7 @@ class TicketMail extends Mailable implements ShouldQueue
     public function build(): Mailable
     {
         return $this->to($this->ticket->email)
-            ->bcc('admin@musikalische-loewen.de')
+            ->bcc(['admin@musikalische-loewen.de', 'kassierer@musikalische-loewen.de'])
             ->subject(sprintf('Kartenbestellung #%s', $this->ticket->number))
             ->markdown('emails.forms.ticket')
             ->attach(public_path('images/archive/large/2024_konzert_sonne_plakat.jpg'));
