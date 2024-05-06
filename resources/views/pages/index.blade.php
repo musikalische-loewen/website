@@ -52,7 +52,7 @@
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
                         <p class="card-text">
-                            Karten für unser Pfingstkonzert gibt es <a href="{{ url('karten') }}">hier</a>!
+                            Karten für unser <a  target="_blank" href="{{ asset('docs/postkarte_pfingstkonzert_2024.pdf') }}">Pfingstkonzert</a> gibt es <a href="{{ url('karten') }}">hier</a>!
                         </p>
                     </div>
                 </div>
