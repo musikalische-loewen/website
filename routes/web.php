@@ -17,9 +17,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Form routes
-Route::post('karten', [TicketController::class, 'store'])->name('forms.ticket');
-Route::get('karten/success', [TicketController::class, 'storeSuccess'])->name('forms.ticket.success');
-Route::get('karten/cancel', [TicketController::class, 'storeError'])->name('forms.ticket.cancel');
 Route::post('kontakt', [FormsController::class, 'contact'])->name('forms.contact');
 Route::post('verein/mitgliedschaft', [FormsController::class, 'membership'])->name('forms.membership');
 

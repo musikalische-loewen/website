@@ -15,7 +15,7 @@
                         <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
                     </div>
                     <div class="col col-md-6 text-center my-auto">
-                        <a title="Pfingstkonzert 2024" href="{{ url('karten') }}">
+                        <a title="Pfingstkonzert 2024" href="#concert">
                             <img src="{{ asset('images/archive/large/2024_konzert_sonne_plakat.jpg') }}" alt="Pfingstkonzert 2024" class="mt-3 mb-3" style="height: 70vh;" />
                         </a>
                     </div>
@@ -34,6 +34,22 @@
 @endsection
 
 @section('main')
+    <div class="container pt-4" id="concert">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-sm bg-primary text-white">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            Der Kartenvorverkauf für unser <a  target="_blank" href="{{ asset('docs/postkarte_pfingstkonzert_2024.pdf') }}">Pfingstkonzert</a> ist beendet. Wir freuen uns auf Ihren Besuch!
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container py-4" id="news">
         <div class="row row-cols-1 row-cols-md-3 g-4" id="lightgallery">
             <div class="col">
@@ -44,15 +60,6 @@
                         </p>
                         <p class="card-text">
                             Nachfolgend finden Sie ein paar Neuigkeiten aus dem Vereinsleben. Noch mehr Neuigkeiten gibt es auf <a target="_blank" rel="noreferrer" href="https://www.instagram.com/musikalische.loewen/" >Instagram</a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm bg-primary text-white">
-                    <div class="card-body">
-                        <p class="card-text">
-                            Karten für unser <a  target="_blank" href="{{ asset('docs/postkarte_pfingstkonzert_2024.pdf') }}">Pfingstkonzert</a> gibt es <a href="{{ url('karten') }}">hier</a>!
                         </p>
                     </div>
                 </div>
