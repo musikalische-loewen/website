@@ -37,7 +37,8 @@ class TicketOverview implements ShouldQueue
                     $ticket->data['name'],
                     $ticket->email,
                     $ticket->data['number_full'],
-                    $ticket->data['number_reduced']
+                    $ticket->data['number_reduced'],
+                    $ticket->data['number_free'],
                 ];
             }
         )->toArray();
@@ -50,9 +51,10 @@ class TicketOverview implements ShouldQueue
         $active->setCellValue('A5', 'Nummer');
         $active->setCellValue('B5', 'Name');
         $active->setCellValue('C5', 'E-Mail');
-        # TODO: Automaticaly determine/show all price categories
+        # TODO: Automatically determine/show all price categories
         $active->setCellValue('D5', 'Normalpreis');
-        $active->setCellValue('E5', 'Kostenlos');
+        $active->setCellValue('E5', 'Ermäßigt');
+        $active->setCellValue('F5', 'Kostenlos');
         $active->getStyle('5:5')->getFont()->setBold(true);
         $active->fromArray($tickets, null, 'A6');
         foreach ($active->getColumnIterator() as $column) {
