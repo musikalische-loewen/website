@@ -9,8 +9,17 @@
         <div class="background-image" style="background-image: url({{ asset('images/archive/large/2023_konzert_klang_der_alpen_gruppenfoto.jpg') }});"></div>
         <div class="background-text container d-flex flex-column align-items-center" style="height: 100vh;">
             <div class="my-auto text-center">
-                <h1>Willkommen...</h1>
-                <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
+                <div class="row">
+                    <div class="col col-md-6 text-center my-auto">
+                        <h1>Willkommen...</h1>
+                        <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
+                    </div>
+                    <div class="col col-md-6 text-center my-auto">
+                        <a title="Bixeworscht und Blosmusik" href="{{ asset('images/archive/large/2025_bixeworscht_plakat.jpg') }}">
+                            <img src="{{ asset('images/archive/large/2025_bixeworscht_plakat.jpg') }}" alt="Bixeworscht und Blosmusik" class="mt-3 mb-3" style="height: 70vh;" />
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="scroll pb-5">
                 <a class="text-white" href="#news">
