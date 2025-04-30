@@ -15,8 +15,8 @@
                         <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
                     </div>
                     <div class="col col-md-6 text-center my-auto">
-                        <a title="Bixeworscht und Blosmusik" href="{{ asset('images/archive/large/2025_bixeworscht_plakat.jpg') }}">
-                            <img src="{{ asset('images/archive/large/2025_bixeworscht_plakat.jpg') }}" alt="Bixeworscht und Blosmusik" class="mt-3 mb-3" style="height: 70vh;" />
+                        <a title="Pfingstkonzerte 2025" href="#concerts">
+                            <img src="{{ asset('images/archive/large/2025_nordlichter_cover.jpg') }}" alt="Pfingstkonzerte 2025" class="mt-3 mb-3" style="height: 70vh;" />
                         </a>
                     </div>
                 </div>
@@ -34,6 +34,20 @@
 @endsection
 
 @section('main')
+    <div class="container pt-4" id="concerts">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-sm bg-primary text-white">
+                    <div class="card-body">
+                        <p class="card-text text-center">
+                            Der Kartenvorverkauf für unsere <a  target="_blank" href="{{ asset('images/archive/large/2025_nordlichter_cover.jpg') }}">Pfingstkonzerte</a> startet in Kürze. Wir freuen uns auf Ihren Besuch!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container py-4" id="news">
         <div class="row row-cols-1 row-cols-md-3 g-4" id="lightgallery">
             <div class="col">
