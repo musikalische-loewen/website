@@ -16,7 +16,7 @@
                     </div>
                     <div class="col col-md-6 text-center my-auto">
                         <a title="Pfingstkonzerte 2025" href="#concerts">
-                            <img src="{{ asset('images/archive/large/2025_nordlichter_cover.jpg') }}" alt="Pfingstkonzerte 2025" class="mt-3 mb-3" style="height: 70vh;" />
+                            <img src="{{ asset('images/archive/large/2025_pippi.jpg') }}" alt="Pfingstkonzerte 2025" class="mt-3 mb-3" style="height: 70vh;" />
                         </a>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                 <div class="card shadow-sm bg-primary text-white">
                     <div class="card-body">
                         <p class="card-text text-center">
-                            Der Kartenvorverkauf für unsere <a  target="_blank" href="{{ asset('images/archive/large/2025_nordlichter_cover.jpg') }}">Pfingstkonzerte</a> startet in Kürze. Wir freuen uns auf Ihren Besuch!
+                            Der Kartenvorverkauf für unsere <a  target="_blank" href="{{ asset('images/archive/large/2025_pippi.jpg') }}">Pfingstkonzerte</a> startet in Kürze. Wir freuen uns auf Ihren Besuch!
                         </p>
                     </div>
                 </div>
