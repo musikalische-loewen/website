@@ -9,17 +9,8 @@
         <div class="background-image" style="background-image: url({{ asset('images/archive/large/2023_konzert_klang_der_alpen_gruppenfoto.jpg') }});"></div>
         <div class="background-text container d-flex flex-column align-items-center" style="height: 100vh;">
             <div class="my-auto text-center">
-                <div class="row">
-                    <div class="col col-md-6 text-center my-auto">
-                        <h1>Willkommen...</h1>
-                        <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
-                    </div>
-                    <div class="col col-md-6 text-center my-auto">
-                        <a title="Pfingstkonzerte 2025" href="#concerts">
-                            <img src="{{ asset('images/archive/large/2025_pfingstkonzerte_nordlichter_plakat.jpg') }}" alt="Pfingstkonzerte 2025" class="mt-3 mb-3" style="height: 70vh;" />
-                        </a>
-                    </div>
-                </div>
+                <h1>Willkommen...</h1>
+                <h2 class="mb-0">...auf der Website des Musikvereins "Musikalische Löwen" Nentershausen&nbsp;e.V.!</h2>
             </div>
             <div class="scroll pb-5">
                 <a class="text-white" href="#news">
@@ -34,22 +25,6 @@
 @endsection
 
 @section('main')
-    <div class="container pt-4" id="concerts">
-        <div class="row">
-            <div class="col-12">
-                <div class="card shadow-sm bg-primary text-white">
-                <div class="card-header text-center"><i class="fa fa-ticket-alt"></i> Ticketverkauf Pfingstkonzerte <i class="fa fa-ticket-alt"></i></div>
-                    <div class="card-body">
-                        <p class="card-text text-center">
-                            Tickets für die diesjähigen <a href="{{ asset('images/archive/large/2025_pfingstkonzerte_nordlichter_plakat.jpg') }}" >Pfingstkonzerte</a> gibt es bei <i>my-ticket.shop</i>:<br>
-                            <a target="_blank" href="https://www.my-ticket.shop/events/-nordlichter-pfingstkonzert-samstag--freiherr-vom-stein-halle-7ZrwRRnR" >Samstag 7.6. (19:00 Uhr)</a> und <a target="_blank" href="https://www.my-ticket.shop/events/-nordlichter-pfingstkonzert-sonntag--freiherr-vom-stein-halle-OmrQ7P2E" >Sonntag 8.6. (17:00 Uhr)</a><br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="container py-4" id="news">
         <div class="row row-cols-1 row-cols-md-3 g-4" id="lightgallery">
             <div class="col">
