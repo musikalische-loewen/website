@@ -18,7 +18,7 @@
                         <a title="Pfingstkonzerte 2026" href="#concerts">
                             <img src="{{ asset('images/other/pfingstkonzerte_2026_plakat.jpg') }}" alt="Pfingstkonzerte 2026" class="mt-3 mb-3" style="height: 70vh;" />
                         </a>
-                        <p><a href="https://www.my-ticket.shop/events?q=Sound+of+New+York&amp;eventtype=4&amp;from=2026-05-23&amp;till=2026-05-24">Tickets gibt es hier!</a></p>
+                        <p><a class="text-white" href="https://www.my-ticket.shop/events?q=Sound+of+New+York&amp;eventtype=4&amp;from=2026-05-23&amp;till=2026-05-24">Tickets gibt es hier!</a></p>
                     </div>
                 </div>
             </div>
