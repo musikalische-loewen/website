@@ -41,4 +41,10 @@ class BasicTest extends TestCase
         $this->assertValidHtml($this->get('/datenschutz')->getContent());
         $this->assertValidHtml($this->get('/impressum')->getContent());
     }
+
+    public function test_attack_paths_are_rickrolled()
+    {
+        $this->get('/.env')->assertRedirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+        $this->get('/wp-login.php')->assertRedirect('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    }
 }

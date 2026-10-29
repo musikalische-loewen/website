@@ -23,20 +23,19 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.3",
         "ext-curl": "*",
         "guzzlehttp/guzzle": "^7.2",
-        "intervention/validation": "^3.2",
-        "laravel/framework": "^10.0",
-        "laravel/sanctum": "^3.2",
-        "laravel/tinker": "^2.8",
-        "lukasmu/laravel-rickroll": "^1.0.2",
-        "mxl/laravel-job": "^1.3",
-        "nesbot/carbon": "^2.66",
+        "intervention/validation": "^4.7",
+        "laravel/framework": "^13.39",
+        "laravel/sanctum": "^4.3",
+        "laravel/tinker": "^3.0",
+        "mxl/laravel-job": "^1.8",
+        "nesbot/carbon": "^3.15",
         "pgrimaud/instagram-user-feed": "^6.6",
-        "phpoffice/phpspreadsheet": "^1.29",
-        "spatie/laravel-honeypot": "^4.0",
-        "spatie/laravel-stripe-webhooks": "^3.2",
+        "phpoffice/phpspreadsheet": "^5.10",
+        "spatie/laravel-honeypot": "^4.7",
+        "spatie/laravel-stripe-webhooks": "^3.12",
         "stripe/stripe-php": "^10.12"
     },
     "require-dev": {
@@ -44,17 +43,16 @@
         "ext-dom": "*",
         "ext-libxml": "*",
         "deployer/deployer": "^7.0",
-        "fakerphp/faker": "^1.9.1",
-        "laravel-lang/common": "^3.1",
-        "laravel/dusk": "^7.1",
-        "laravel/pint": "^1.0",
-        "laravel/sail": "^1.18",
-        "laravel/telescope": "^4.4",
-        "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^7.0",
-        "phpunit/phpunit": "^10.0",
-        "spatie/laravel-ignition": "^2.0",
-        "squizlabs/php_codesniffer": "^3.5"
+        "fakerphp/faker": "^1.24",
+        "laravel/dusk": "^8.7",
+        "laravel/pint": "^1.25",
+        "laravel/sail": "^1.46",
+        "laravel/telescope": "^5.26",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.9",
+        "phpunit/phpunit": "^12.0",
+        "spatie/laravel-ignition": "^2.12",
+        "squizlabs/php_codesniffer": "^3.13"
     },
     "autoload": {
         "psr-4": {
@@ -105,6 +103,9 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
+        },
+        "platform": {
+            "php": "8.3.0"
         }
     },
     "minimum-stability": "stable",
