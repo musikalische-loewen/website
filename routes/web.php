@@ -20,5 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::post('kontakt', [FormsController::class, 'contact'])->name('forms.contact');
 Route::post('verein/mitgliedschaft', [FormsController::class, 'membership'])->name('forms.membership');
 
+// Rickroll people probing for common attack paths
+Route::redirect('{rickroll}', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')->whereIn('rickroll', [
+    '.env', '.git', 'wp-admin', 'wp-login', 'wp-login.php', 'composer.lock', 'yarn.lock',
+    'package-lock.json', 'xmlrpc.php', 'typo3', 'phpinfo.php', '.htaccess',
+]);
+
 // Default page routes
 Route::get('{path?}', PagesController::class)->where('path', '.*');

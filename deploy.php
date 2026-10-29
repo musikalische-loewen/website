@@ -12,7 +12,7 @@ host('production')
     ->set('hostname', getenv('DEPLOYMENT_HOST'))
     ->set('remote_user', getenv('DEPLOYMENT_USER'))
     ->set('deploy_path', '~/webapps/{{application}}')
-    ->set('bin/php', '/RunCloud/Packages/php81rc/bin/php');
+    ->set('bin/php', '/RunCloud/Packages/php83rc/bin/php');
 
 task('deploy', [
     'deploy:prepare',

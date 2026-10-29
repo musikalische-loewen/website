@@ -1,4 +1,4 @@
-image: lorisleiva/laravel-docker:8.1
+image: lorisleiva/laravel-docker:8.3
 
 .init_ssh: &init_ssh |
   eval $(ssh-agent -s)
@@ -104,18 +104,12 @@ phpcs:
   script:
     - composer style-test
 
-sensiolabs:
+composer-audit:
   stage: test
   script:
-    - test -d security-checker || git clone https://github.com/sensiolabs/security-checker.git
-    - cd security-checker
-    - php security-checker security:check ../composer.lock
-  dependencies:
-    - composer
-  cache:
-    key: ${CI_COMMIT_REF_SLUG}-sensiolabs
-    paths:
-      - security-checker
+    - composer audit --locked --no-interaction
+  dependencies: []
+  needs: []
 
 deployer:
   stage: deploy
