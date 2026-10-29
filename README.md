@@ -1,8 +1,5 @@
 # Website of Musikverein "Musikalische Löwen" Nentershausen
 
-[![coverage report](https://gitlab.com/lukasmu/loewen/badges/master/coverage.svg?style=flat-square)](https://gitlab.com/lukasmu/loewen/-/commits/master)
-[![pipeline status](https://gitlab.com/lukasmu/loewen/badges/master/pipeline.svg?style=flat-square)](https://gitlab.com/lukasmu/loewen/-/commits/master)
-
 This repository contains the code for the website of the Musikverein "Musikalische Löwen" Nentershausen available at [musikalische-loewen.de](https://musikalische-loewen.de).
 In the following this website is just referred to as the 🦁 website.
 Happy coding!
@@ -11,49 +8,45 @@ Happy coding!
 
 The first 🦁 website was created in the early years of the twenty-first century by André Metternich. A completely revised website was then launched in the year 2012 by Lukas Müller. Then in the year 2021 another revamp was performed by Anna-Maria Ortseifen, Pascal Zängerle and Lukas Müller.
 
-The new 🦁 website is based on the Laravel framework and comes with complete CI/CD workflows.
+In 2026 the 🦁 website was migrated from Laravel to a static site built with [Jekyll](https://jekyllrb.com) and hosted on GitHub Pages.
 
-## Installing
+## Structure
 
-In the following some instructions for installing the 🦁 website in a local development environment are presented. The entire installation process should not take much longer than 15 minutes.
+- `_config.yml`: site-wide settings (name, e-mail address, URL)
+- `_layouts/`: the page skeleton (`base.html`) and the default page layout with title header (`main.html`)
+- `_includes/`: navigation, footer and the gallery script
+- `_data/galerie.yml`: captions for the gallery
+- `*.html`, `orchester/`, `verein/`: the pages, each with a short front matter block (title, header image, abstract)
+- `css/`, `js/`, `fonts/`: precompiled Bootstrap theme, Lightgallery and Masonry
+- `images/`, `docs/`: images and PDFs
 
-It is assumed that you are using Windows 10 as operating system. In case that you are using Linux or Mac you need to do things slightly different, but usually the process is even more straightforward.
+Images are stored as WebP in three sizes: `images/archive/large` (1920px wide, header backgrounds and lightbox), `images/archive/medium` (1080px) and `images/archive/small` (640px, gallery thumbnails).
+To add a picture to the gallery, convert it with [ffmpeg](https://ffmpeg.org) into the three sizes with a name starting with the year (e.g. `2026_konzert_a.webp`) and optionally add a caption to `_data/galerie.yml`:
 
-1. Make sure to install a GIT client (e.g. [the native one](https://git-scm.com/downloads)) and an IDE of your choice (e.g. [PHPStorm](https://www.jetbrains.com/phpstorm/)).
-2. Then install Visual C++ Redistributable for Visual Studio, PHP and Composer as explained on [https://devanswers.co/install-composer-php-windows-10/](https://devanswers.co/install-composer-php-windows-10/]). Make sure to install PHP 8.
-3. Go to the directory where you installed PHP, search for the php.ini file and enable the extensions pdo_sqlitee, sqlite3 and fileinfo by removing the semicolon before the lines extension=pdo_sqlite, extension=sqlite3 and extension=fileinfo. Save the php.ini file.
-4. Then clone this repository to your computer. Simply run ```git clone https://gitlab.com/lukasmu/loewen.git``` in the directory of your choice. Afterwards switch to the cloned directory by typing ```cd loewen```.
-5. Run  ```composer create-project``` to finalize the installation of the 🦁 website. This might take a minute or two.
-6. Run ```php artisan serve``` to startup your local development server. If you want to stop the server press CTRL and C.
-7. Run ```php artisan migrate:refresh --seed``` to initialize a development database.
+```bash
+for size in large:1920 medium:1080 small:640; do
+  ffmpeg -i 2026_konzert_a.jpg -vf "scale='min(${size#*:},iw)':-2" -map_metadata -1 -c:v libwebp -quality 80 -preset photo "images/archive/${size%%:*}/2026_konzert_a.webp"
+done
+```
 
-## Testing
+## Local preview
 
-You can run all tests by calling ```php artisan test```. Make sure that your local development server is running in the background for the browser tests!
+Install Ruby and Bundler, then run:
 
-## Changelog
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+The site is then available at [http://localhost:4000](http://localhost:4000).
 
-## Contributing
+## Deployment
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-Hereafter some development tips & tricks can be shared.
-
-- Just create a new branch for every contribution and do not forget to add tests. When your contribution is ready, please draft a new merge request. Once this request is approved it will be automatically deployed with almost zero-downtime to the [production environment](https://gitlab.com/lukasmu/loewen/-/environments).
-- Very important tip: Add lots of easter eggs!
-- If you are using [PHPStorm](https://www.jetbrains.com/phpstorm/) you can add the two SQLite databases in the database folder as data sources so that you can directly browse the database from within your IDE.
-- To be continued...
-
-## Help
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Every push to `main` is built and deployed to GitHub Pages by `.github/workflows/pages.yml`. Pull requests are only built.
 
 ## Security
 
-If you discover a security vulnerability within the code of the 🦁 website, please send an e-mail to Lukas Müller via [hello@lukasmu.com](mailto:hello@lukasmu.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within the code of the 🦁 website, please send an e-mail to Lukas Müller via [hello@lukasmu.com](mailto:hello@lukasmu.com).
 
 ## License
 

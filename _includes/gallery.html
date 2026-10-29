@@ -1,0 +1,19 @@
+<script type="text/javascript">
+    // Initialize lightgallery
+    let lightGalleryOptions = {
+        selector: '.card-img-wrap',
+        download: false,
+    };
+    lightGallery(document.getElementById('lightgallery'), lightGalleryOptions);
+    {% if page.masonry %}
+    // Initialize Mansonry
+    let masonry = new Masonry(document.getElementById('{{ page.masonry }}'), {
+        itemSelector: '.col',
+        percentPosition: true,
+    });
+    // Layout Masonry after each image loaded
+    imagesLoaded(document.getElementById('{{ page.masonry }}'), function() {
+        masonry.layout();
+    });
+    {% endif %}
+</script>

@@ -1,0 +1,45 @@
+---
+layout: base
+---
+{% if page.background %}
+    <header class="background-wrapper d-flex align-items-center">
+        <div class="background-text container py-5">
+            <h1>
+                {{ page.title }}
+            </h1>
+            <div class="row align-items-start">
+                <div class="col col-md-9">
+                    <p class="mb-0">
+                        {{ page.abstract }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+{% elsif page.title or page.abstract %}
+    <header class="background-wrapper background-filter-dark d-flex align-items-center">
+        {% if page.image %}
+        <div class="background-image" style="background-image: url({{ page.image }});"></div>
+        {% endif %}
+        <div class="background-text container py-5">
+            {% if page.title %}
+                <h1>
+                    {{ page.title }}
+                </h1>
+            {% endif %}
+            {% if page.abstract %}
+                <div class="row align-items-start">
+                    <div class="col col-md-9">
+                        <p class="mb-0">
+                            {{ page.abstract }}
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </header>
+{% endif %}
+
+<main class="flex-shrink-0">
+    {{ content }}
+</main>

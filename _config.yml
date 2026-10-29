@@ -1,0 +1,15 @@
+title: Musikalische Löwen
+name_full: Musikverein „Musikalische Löwen“ Nentershausen e.V.
+since: 1958
+email: info@musikalische-loewen.de
+url: https://musikalische-loewen.de
+lang: de
+
+exclude:
+  - README.md
+  - CHANGELOG.md
+  - LICENSE.md
+  - Gemfile
+  - Gemfile.lock
+  - "*.map"
+  - "js/app.js.LICENSE.txt"

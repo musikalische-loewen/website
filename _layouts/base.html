@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#233876">
+
+        {% if page.description %}
+            <meta name="description" content="{{ page.description | escape }}">
+        {% elsif page.abstract %}
+            <meta name="description" content="{{ page.abstract | strip_html | normalize_whitespace | escape }}">
+        {% endif %}
+
+        <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+
+        <link rel="preload" as="font" href="/fonts/fira-sans-v10-latin-regular.woff2?d9506f36795a08de33aac697918f030c" type="font/woff2" crossorigin>
+        <link rel="preload" as="font" href="/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?d878b0a6a1144760244ff0665888404c" type="font/woff2" crossorigin>
+        <link rel="preload" as="font" href="/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?1551f4f60c37af51121f106501f69b80" type="font/woff2" crossorigin>
+
+        <link href="/images/logos/logo_black.png" rel="icon" type="image/png">
+        <link href="/css/app.css" rel="stylesheet">
+        <link href="/css/site.css" rel="stylesheet">
+    </head>
+
+    <body class="d-flex flex-column">
+
+        {% if page.background %}
+            <div class="position-fixed w-100 h-100">
+                <div class="background-wrapper background-filter-light h-100">
+                    <div class="background-image" style="background-image: url('{{ page.image }}');">
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        <nav class="navbar navbar-dark navbar-expand-lg bg-primary {% if page.background or page.navbar_fixed %}bg-transparent{% else %}shadow{% endif %} {% if page.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}">
+            {% include nav.html %}
+        </nav>
+
+        {{ content }}
+
+        <footer class="mt-auto {% if page.background %}bg-transparent{% else %}bg-dark{% endif %}">
+            {% include footer.html %}
+        </footer>
+
+        <script src="/js/app.js" type="text/javascript"></script>
+
+        {% if page.lightgallery %}
+            {% include gallery.html %}
+        {% endif %}
+
+    </body>
+
+</html>

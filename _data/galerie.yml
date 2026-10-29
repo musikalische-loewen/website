@@ -1,0 +1,64 @@
+# Bildunterschriften der Galerie: Jedes Bild in images/archive/small, dessen Name mit "20"
+# beginnt, erscheint in der Galerie. Es gilt der erste Eintrag, dessen Präfix passt.
+- prefix: 2010_konzert_afrika
+  description: "Konzert 2010: Afrika"
+- prefix: 2011_bw-musix_balingen
+  description: "Das Jugendorchester auf dem BWMusix Wettbewerb 2011 in Balingen"
+- prefix: 2011_gemeinschaftkonzert_ebernhahn
+  description: "Gemeinschaftskonzert 2011 mit dem Musikverein Ebernhahn"
+- prefix: 2011_kirchturmblasen_niedererbach
+  description: "Kirchturmblasen im Advent 2011 in Niedererbach"
+- prefix: 2011_vereinsausflug_calella
+  description: "Vereinsausflug 2011 auf das internationalen Oktoberfest nach Calella"
+- prefix: 2012_konzert_
+  description: "Konzert 2012: Concierto de Calella"
+- prefix: 2012_konzertreise_thueringen
+  description: "Konzertreise 2012 nach Thüringen"
+- prefix: 2013_heeresmusikkorps_workshop_JO
+  description: "Das Jugendorchester zu Gast beim Heeresmusikkorps in Koblenz"
+- prefix: 2013_vom_westerwald_in_den_wilden_westen
+  description: "Konzert 2012: Vom Westerwald in den Wilden Westen"
+- prefix: 2014_very_british
+  description: "Konzert 2014: Very British!"
+- prefix: 2015_mit_dem_wind_nach_westen
+  description: "Konzert 2015: Mit dem Wind nach Westen"
+- prefix: 2016_carnaval_de_paris
+  description: "Konzert 2016: Carnaval de Paris"
+- prefix: 2016_em_qualifikation_u21
+  description: "Begleitung eines EM-Qualifikationsspiels der U21 Fußball Nationalmannschaft 2016"
+- prefix: 2016_kirmes_nentershausen
+  description: "Kirmes 2016 in Nentershausen"
+- prefix: 2016_vereinsausflug_calella
+  description: "Vereinsausflug 2016 auf das internationalen Oktoberfest nach Calella"
+- prefix: 2016_wir_fuellen_das_stadion_frankfurt
+  description: "Teilnahme am Weltrekordversuch \"Wir füllen das Stadion 2016\" in der Commerzbank-Arena in Frankfurt"
+- prefix: 2017_karneval
+  description: "Karneval 2017"
+- prefix: 2017_konzert_stratosphaere
+  description: "Konzert 2017: Stratosphäre"
+- prefix: 2017_statosphaere
+  description: "Konzert 2017: Stratosphäre"
+- prefix: 2018_bb
+  description: "Die Big Band der Bundeswehr 2018 zu Gast in Nenterhausen"
+- prefix: 2018_der_musikalische_loewe
+  description: "Konzert 2018: Der Musikalische Löwe"
+- prefix: 2019_kirchturmblasen
+  description: "Kirchturmblasen Weihnachten 2019 in Nentershausen"
+- prefix: 2019_konzert_circus
+  description: "Konzert 2019: Circus in Nentershausen"
+- prefix: 2019_oktoberfest_montabaur
+  description: "Auftritt auf dem Oktoberfest 2019 in Montabaur"
+- prefix: 2019_volkstrauertag
+  description: "Volkstrauertag 2019"
+- prefix: 2019_weihnachtsmarkt
+  description: "Weihnachtsmarkt 2019 in Limburg"
+- prefix: 2020_karneval
+  description: "Veilchendienstagsumzug 2020 in Heimbach-Weis"
+- prefix: 2022_konzert_zu_neuen_horizonten
+  description: "Konzert 2022: Zu neuen Horizonten"
+- prefix: 2023_konzert_klang_der_alpen_gruppenfoto
+  description: "Konzert 2023: Klang der Alpen"
+- prefix: 2023_konzert_klang_der_alpen_plakat
+  description: "Konzert 2023: Klang der Alpen"
+- prefix: 2023_adventskonzert
+  description: "Adventskonzert 2023"

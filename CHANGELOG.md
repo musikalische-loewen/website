@@ -19,3 +19,11 @@ All notable changes to the 🦁 website will be documented in this file.
 
 - Framework update (Laravel 13, PHP 8.3)
 - Security updates
+
+## 2.0.0 - 2026-10-30
+
+- Migrated from Laravel to a static Jekyll site hosted on GitHub Pages
+- Removed Instagram feed, contact form, online membership form (replaced by an e-mail link), Stripe ticket form and internal area
+- Updated Impressum and Datenschutzerklärung
+- Added link tiles and concert announcement to the front page
+- Converted images to WebP and added lazy loading

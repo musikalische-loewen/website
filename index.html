@@ -1,0 +1,156 @@
+---
+layout: base
+navbar_fixed: true
+description: Wir sind ein junger Musikverein aus Nentershausen im Westerwald und bieten Ihnen Musik für die verschiedensten Anlässe. Gerne kommen wir auch zu Ihrer Veranstaltung!
+concert:
+  # Ankündigung des nächsten Konzerts (nach dem Konzert einfach diesen Block löschen)
+  title: Adventskonzert – Musik verbindet
+  subtitle: Ein festlicher Nachmittag mit Männerchor und Orchester
+  date: Sonntag, 29. November 2026 (1. Advent), 15:00 Uhr
+  location: Pfarrkirche St. Laurentius Nentershausen
+  image: /images/other/2026_adventskonzert.webp
+  tickets: https://tickets.musikalische-loewen.de/loewen/advent-2026/
+  text:
+    - >-
+      Die Adventszeit ist voller kleiner besonderer Momente: vertraute Melodien, festliche
+      Klänge und die Freude, gemeinsam Zeit zu verbringen. Genau dazu laden der
+      Musikverein „Musikalische Löwen“ Nentershausen und der Männerchor „Eintracht“
+      1905 Nentershausen ein. Nach der gelungenen Premiere 2023 gestalten die beiden
+      Vereine erneut ein gemeinsames Adventskonzert in der Pfarrkirche St. Laurentius.
+    - >-
+      Freuen Sie sich auf eine musikalische Reise durch die Advents- und Weihnachtszeit.
+      Von zeitlosen Klassikern über stimmungsvolle Melodien bis hin zu mitreißender
+      Filmmusik erwartet Sie ein abwechslungsreiches Programm voller festlicher Klänge
+      und besonderer musikalischer Momente. Mal berühren die Stimmen des Chors, mal
+      entfaltet das Orchester seinen vollen Klang, mal vereinen sich beide zu einem
+      stimmungsvollen Ganzen. Unter der Leitung von Lukas Oberbauer und Fabian Glück
+      entsteht so ein musikalischer Nachmittag, der zum Innehalten, Genießen und
+      Mitsingen einlädt.
+    - >-
+      Auch nach dem letzten Ton ist noch nicht Schluss: Bei duftendem Glühwein,
+      Kinderpunsch und leckerer Bratwurst möchten wir den Nachmittag gemeinsam mit
+      Ihnen ausklingen lassen. Kommen Sie vor der Kirche miteinander ins Gespräch,
+      genießen Sie die gemütliche Atmosphäre und lassen Sie die vorweihnachtliche
+      Stimmung noch ein wenig nachklingen.
+cards:
+  - title: Blasorchester
+    url: /orchester/haupt
+    image: /images/archive/medium/2017_konzert_stratosphaere.webp
+    text: Unser Blasorchester probt jeden Freitag um 19:15 Uhr und spielt vom Pfingstkonzert bis zum Karneval.
+  - title: Jugendorchester
+    url: /orchester/jugend
+    image: /images/archive/medium/jugendorchester.webp
+    text: Im Jugendorchester spielen unsere Nachwuchsmusiker anspruchsvollere Literatur und gestalten zahlreiche Auftritte mit.
+  - title: Bläserklasse
+    url: /orchester/kids
+    image: /images/archive/medium/kidsorchester.webp
+    text: In der Bläserklasse lernen Kinder nach dem ersten Unterrichtsjahr das Zusammenspiel mit anderen.
+  - title: Ausbildung
+    url: /verein/ausbildung
+    image: /images/archive/medium/pexels-cottonbro-4709811.webp
+    text: Von der musikalischen Früherziehung bis zur Instrumentalausbildung – bei uns lernen Sie und Ihre Kinder ein Instrument.
+  - title: Mitgliedschaft
+    url: /verein/mitgliedschaft
+    image: /images/archive/medium/pexels-pixabay-534283.webp
+    text: Werden Sie aktives oder passives Mitglied und unterstützen Sie die Musik in Nentershausen.
+---
+<header class="background-wrapper background-filter-light" style="min-height: 125vh;">
+    <div class="background-image" style="background-image: url(/images/archive/large/2023_konzert_klang_der_alpen_gruppenfoto.webp);"></div>
+    <div class="background-text container d-flex flex-column align-items-center" style="height: 100vh;">
+        <div class="my-auto text-center">
+            {% if page.concert %}
+                <div class="row">
+                    <div class="col-12 col-md-6 text-center my-auto">
+                        <h1>Willkommen...</h1>
+                        <h2 class="mb-0">...auf der Website des Musikvereins „Musikalische Löwen“ Nentershausen&nbsp;e.V.!</h2>
+                    </div>
+                    <div class="col-12 col-md-6 text-center my-auto">
+                        <a title="{{ page.concert.title }}" href="#concert">
+                            <img src="{{ page.concert.image }}" alt="{{ page.concert.title }}" class="mt-3 mb-3 concert-flyer" {{ page.concert.image | webp_size }}>
+                        </a>
+                        <p><a class="text-white" target="_blank" rel="noopener" href="{{ page.concert.tickets }}">Tickets gibt es hier!</a></p>
+                    </div>
+                </div>
+            {% else %}
+                <h1>Willkommen...</h1>
+                <h2 class="mb-0">...auf der Website des Musikvereins „Musikalische Löwen“ Nentershausen&nbsp;e.V.!</h2>
+            {% endif %}
+        </div>
+        <div class="scroll pb-5">
+            <a class="text-white" href="#{% if page.concert %}concert{% else %}news{% endif %}">
+                <span></span>
+                <span></span>
+                <span></span>
+                Mehr Infos &amp; News
+            </a>
+        </div>
+    </div>
+</header>
+
+<main class="flex-shrink-0">
+    {% if page.concert %}
+    <div class="container pt-4" id="concert">
+        <div class="card shadow-sm bg-primary text-white">
+            <div class="card-header text-center"><i class="fa fa-ticket-alt"></i> {{ page.concert.title }} <i class="fa fa-ticket-alt"></i></div>
+            <div class="card-body">
+                <p class="card-text"><strong>{{ page.concert.subtitle }}</strong><br>{{ page.concert.date }}<br>{{ page.concert.location }}</p>
+                {% for paragraph in page.concert.text %}
+                    <p class="card-text">{{ paragraph }}</p>
+                {% endfor %}
+                <p class="card-text text-center mt-3 mb-0">
+                    <a class="btn btn-ticket" target="_blank" rel="noopener" href="{{ page.concert.tickets }}"><i class="fa fa-ticket-alt"></i> Tickets kaufen</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="container py-4" id="news">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card shadow-sm bg-primary text-white h-100">
+                    <div class="card-body">
+                        <p class="card-text mb-3">
+                            Wir sind ein junger Musikverein aus Nentershausen im Westerwald und bieten Ihnen Musik für die verschiedensten Anlässe. Gerne kommen wir auch zu Ihrer Veranstaltung,  <a class="text-white" href="/kontakt">schreiben Sie uns eine Mail oder rufen Sie einfach an</a>!
+                        </p>
+                        <p class="card-text">
+                            Neuigkeiten aus dem Vereinsleben gibt es auf <a class="text-white" target="_blank" rel="noreferrer" href="https://www.instagram.com/musikalische.loewen/" >Instagram</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% for card in page.cards %}
+                <div class="col">
+                    <div class="card shadow-sm h-100 tile">
+                        <div class="card-img-wrap">
+                            <img src="{{ card.image }}" class="card-img-top" alt="" {{ card.image | webp_size }} loading="lazy">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title"><a href="{{ card.url }}">{{ card.title }}</a></h3>
+                            <p class="card-text">{{ card.text }}</p>
+                            <span class="tile-more mt-auto" aria-hidden="true">Mehr erfahren &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!--
+
+      __  __           _ _         _ _          _            _                                      _____                _       _
+     |  \/  |         (_) |       | (_)        | |          | |                                    / ____|              (_)     | |
+     | \  / |_   _ ___ _| | ____ _| |_ ___  ___| |__   ___  | |     ___   _____      _____ _ __   | (___  _ __   ___ _____  __ _| |
+     | |\/| | | | / __| | |/ / _` | | / __|/ __| '_ \ / _ \ | |    / _ \ / _ \ \ /\ / / _ \ '_ \   \___ \| '_ \ / _ \_  / |/ _` | |
+     | |  | | |_| \__ \ |   < (_| | | \__ \ (__| | | |  __/ | |___| (_) |  __/\ V  V /  __/ | | |  ____) | |_) |  __// /| | (_| | |
+     |_|  |_|\__,_|___/_|_|\_\__,_|_|_|___/\___|_| |_|\___| |______\___/ \___| \_/\_/ \___|_| |_| |_____/| .__/ \___/___|_|\__,_|_|
+                                                                                                         | |
+                                                                                                         |_|
+    Herzlich Glückwunsch! Sie haben das Musikalische Löwen Spezial gefunden!
+    Als Gewinn gibt es drei geheime YouTube Links:
+    - Musiplantschen auf dem Herthasee: https://www.youtube.com/watch?v=rNR3o-FCjPw
+    - Quellkartoffel und Dupp Dupp für vier Clowns: https://www.youtube.com/watch?v=f9ghAKP6IIE
+    - Weihnachtsfeier: https://www.youtube.com/watch?v=GSnxeejk9mk
+    Viel Spaß damit!
+
+    -->
+</main>

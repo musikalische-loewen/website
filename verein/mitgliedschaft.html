@@ -1,0 +1,48 @@
+---
+layout: main
+permalink: /verein/mitgliedschaft
+title: Mitgliedschaft
+image: /images/archive/large/pexels-pixabay-534283.webp
+abstract: >-
+  Möchten Sie aktives oder passives Mitglied in unserem Verein werden? Dann können sie uns gerne <a class="text-white" href="/kontakt">kontaktieren</a>, eine unserer <a class="text-white" href="/orchester/haupt">Proben</a> besuchen oder uns Ihren Mitgliedsantrag einfach per E-Mail schicken. Wir freuen uns auf Sie!
+---
+{% capture body %}Hiermit erkläre ich meinen Eintritt in den {{ site.name_full }} als aktives / passives Mitglied (Nichtzutreffendes bitte löschen).
+
+Eintrittsdatum:
+Vorname:
+Nachname:
+Straße:
+PLZ:
+Ort:
+E-Mail:
+Telefonnummer:
+Instrument (optional):
+Geburtstag:
+Hochzeitstag (optional):
+
+Gleichzeitig ermächtige ich den {{ site.name_full }} bis auf Widerruf den Jahresbeitrag von meinem nachstehenden Bankkonto per Einzugsermächtigung abzubuchen.
+
+IBAN:
+BIC:
+Kontoinhaber:
+
+Ich habe die Datenschutzerklärung ({{ '/datenschutz' | absolute_url }}) gelesen und bin mit deren Geltung einverstanden.
+{% endcapture %}
+<div class="container my-5">
+    <div class="card shadow-sm my-0 py-0">
+        <div class="card-body">
+            <p>
+                Um Mitglied zu werden, schicken Sie uns einfach eine E-Mail an <a href="mailto:{{ site.email }}">{{ site.email }}</a>.
+                Über den nachfolgenden Button wird eine vorausgefüllte E-Mail in Ihrem E-Mail-Programm geöffnet, in der Sie nur noch Ihre Angaben ergänzen müssen.
+            </p>
+            <p>
+                Mit Ihrem Antrag erklären Sie Ihren Eintritt in den {{ site.name_full }} und ermächtigen den Verein bis auf Widerruf, den Jahresbeitrag von Ihrem Bankkonto per Einzugsermächtigung abzubuchen.
+                Der Jahresbeitrag beträgt für Jugendliche 9,00 Euro und für Erwachsene 18,00 Euro.
+            </p>
+            <p>
+                Bitte lesen Sie vorab unsere <a href="/datenschutz">Datenschutzerklärung</a>.
+            </p>
+            <a href="mailto:{{ site.email }}?subject={{ 'Mitgliedsantrag' | uri_escape }}&amp;body={{ body | uri_escape }}" class="btn btn-primary btn-round btn-block">Mitgliedsantrag per E-Mail senden</a>
+        </div>
+    </div>
+</div>

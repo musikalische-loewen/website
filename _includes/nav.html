@@ -1,0 +1,75 @@
+<div class="container">
+    <a class="navbar-brand" href="{{ '/' | absolute_url }}">
+        <img src="/images/logos/logo_white.png" height="32" width="66" class="mr-3" alt="Logo" />
+        {{ site.title }}
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+        <ul class="navbar-nav mt-3 mt-lg-0">
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                    <i class="fa fa-music"></i>
+                    Orchester
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ '/orchester/haupt' | absolute_url }}">
+                            Blasorchester
+                        </a></li>
+                    <li><a class="dropdown-item" href="{{ '/orchester/jugend' | absolute_url }}">
+                            Jugendorchester
+                        </a></li>
+                    <li><a class="dropdown-item" href="{{ '/orchester/kids' | absolute_url }}">
+                            Bläserklasse
+                        </a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                    <i class="fa fa-users"></i>
+                    Verein
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="{{ '/verein/vorstand' | absolute_url }}">
+                            Vorstand
+                        </a></li>
+                    <li><a class="dropdown-item" href="{{ '/verein/mitgliedschaft' | absolute_url }}">
+                            Mitgliedschaft
+                        </a></li>
+                    <li><a class="dropdown-item" href="{{ '/verein/ausbildung' | absolute_url }}">
+                            Ausbildung
+                        </a></li>
+                    <li><a class="dropdown-item" href="{{ '/verein/chronik' | absolute_url }}">
+                            Chronik
+                        </a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="{{ '/galerie' | absolute_url }}" class="nav-link">
+                    <i class="fa fa-image"></i>
+                    Galerie
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ '/kontakt' | absolute_url }}" class="nav-link">
+                    <i class="fa fa-envelope"></i>
+                    Kontakt
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://web.konzertmeister.app" class="nav-link" target="_blank" rel="noreferrer">
+                    {% comment %}TODO: Replace icon{% endcomment %}
+                    <i class="fa fa-calendar-check"></i>
+                    <span class="d-lg-none d-xl-none">Konzertmeister</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.instagram.com/musikalische.loewen/" class="nav-link" target="_blank" rel="noreferrer">
+                    <i class="fab fa-instagram"></i>
+                    <span class="d-lg-none d-xl-none">Instagram</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
